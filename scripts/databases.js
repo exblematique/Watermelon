@@ -9,7 +9,7 @@ let skills = [
         "img": "development.webp"
     },{
         "title": "Postproduction",
-        "desc": "",
+        "desc": "Pour la postproduction, vous pouvez compter sur nous : nous continuerons à travailler sans relâche jusqu'à ce que vous obteniez exactement le résultat attendu, tout en respectant votre échéancier et votre budget. Si vous avez des questions, contactez-nous dès aujourd'hui.",
         "img": "postproduction.webp"
     }
 ];

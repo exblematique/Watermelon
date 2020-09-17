@@ -1,0 +1,24 @@
+body{
+    display: grid;
+}
+
+header{
+    grid-row: 1;
+}
+
+#title{
+    grid-row: 2;
+}
+
+.left{
+    grid-column: 1;
+}
+
+.right{
+    grid-column: 2/4;
+}
+
+#skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

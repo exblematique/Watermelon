@@ -2,8 +2,15 @@ body{
     display: grid;
 }
 
+h1, h2, h3, h4, p{
+    text-align: center;
+    color: orangered;
+}
+
 header{
+    display: grid;
     grid-row: 1;
+    grid-template-columns: 1fr 2fr;
 }
 
 #title{
@@ -18,7 +25,18 @@ header{
     grid-column: 2/4;
 }
 
-#skills{
+#skills, #other{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#skills div, #other div{
+    height: 500px;
+    width: 300px;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#skills div *, #other div *{
+    color: aliceblue;
 }

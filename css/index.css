@@ -17,14 +17,6 @@ header{
     grid-row: 2;
 }
 
-.left{
-    grid-column: 1;
-}
-
-.right{
-    grid-column: 2/4;
-}
-
 #skills, #other{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

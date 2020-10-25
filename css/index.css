@@ -1,7 +1,3 @@
-body{
-    display: grid;
-}
-
 h1, h2, h3, h4, p{
     text-align: center;
     color: orangered;
@@ -9,12 +5,7 @@ h1, h2, h3, h4, p{
 
 header{
     display: grid;
-    grid-row: 1;
     grid-template-columns: 1fr 2fr;
-}
-
-#title{
-    grid-row: 2;
 }
 
 #skills, #other {
@@ -22,6 +13,9 @@ header{
     grid-gap: 20px;
 }
 
+/*
+ * Change aspect of website according to width
+ */
 @media screen and (min-width: 1000px) {
     #skills, #other {
         grid-template-columns: 1fr 1fr 1fr;
@@ -31,7 +25,11 @@ header{
 @media screen and (max-width: 1000px) and (min-width: 650px) {
     #skills, #other {
         grid-template-columns: 1fr 1fr;
-        grid-auto-flow: row;
+    }
+
+    /* Complete grid for 3 images in 2*2 grid */
+    .skills-3 {
+        grid-area: 2 / span 2;
     }
 }
 
@@ -43,10 +41,15 @@ header{
 
 #skills div, #other div{
     height: 500px;
-    width: 300px;
-    background-repeat: no-repeat;
-    margin: auto;
+    background-size: cover;
+    display: grid;
+    align-content: end;
 }
+
+#skills div{
+    height: 600px;
+}
+
 #skills div *, #other div *{
     color: aliceblue;
 }
@@ -63,4 +66,16 @@ header{
 .bgimg-1 {
     background-image: url('/w3images/parallax1.jpg');
     min-height: 100%;
+}
+
+.skills-1 {
+    background-image: url('../assets/skills/preproduction.webp');
+}
+
+.skills-2 {
+    background-image: url('../assets/skills/development.webp');
+}
+
+.skills-3 {
+    background-image: url('../assets/skills/postproduction.webp');
 }

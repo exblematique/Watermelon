@@ -8,22 +8,62 @@ header{
     grid-template-columns: 1fr 2fr;
 }
 
-#skills, #other {
+.skills, .team {
     display: grid;
     grid-gap: 20px;
+}
+
+.skills div, .team > div{
+    height: 500px;
+    background-size: cover;
+    display: grid;
+    align-content: end;
+}
+
+.skills div{
+    height: 600px;
+}
+
+.skills div *, .team div *{
+    color: aliceblue;
+}
+
+.img{
+    height: inherit;
+    background-size: cover;
+    visibility: hidden;
+}
+#president, #president .img{
+    background-image: url('../assets/team/xavier.webp');
 }
 
 /*
  * Change aspect of website according to width
  */
 @media screen and (min-width: 1000px) {
-    #skills, #other {
+    .skills, .team {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #president{
+        background-image: none;
+        grid-area: 1 / span 3;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    #president .img{
+        visibility: visible;
+        grid-area: span 2 / 1;
+    }
+
+    #president *{
+        color: orangered;
     }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 650px) {
-    #skills, #other {
+    .skills, .team {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -34,24 +74,9 @@ header{
 }
 
 @media screen and (max-width: 650px) {
-    #skills, #other {
+    .skills, .team {
         grid-template-columns: 1fr;
     }
-}
-
-#skills div, #other div{
-    height: 500px;
-    background-size: cover;
-    display: grid;
-    align-content: end;
-}
-
-#skills div{
-    height: 600px;
-}
-
-#skills div *, #other div *{
-    color: aliceblue;
 }
 
 /* Create a Parallax Effect */
@@ -79,3 +104,4 @@ header{
 .skills-3 {
     background-image: url('../assets/skills/postproduction.webp');
 }
+

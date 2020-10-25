@@ -1,11 +1,50 @@
-h1, h2, h3, h4, p{
+body{
+    background-color: beige;
+}
+
+.title{
+    background-color: deepskyblue;
+}
+
+h1, h2, h3, h4, p, a{
     text-align: center;
     color: orangered;
 }
 
+a{
+    text-decoration: none;
+    font-size: xx-large;
+}
+
 header{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.logo{
+    grid-area: logo;
+    background-image: url('../assets/logo_square.webp');
+    background-size: inherit;
+    height: 117px;
+    width: 117px;
+}
+.links{
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.social{
+    grid-area: social;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.social > a{
+    padding: 10px;
+    font-size: xx-large;
 }
 
 .skills, .team {
@@ -41,6 +80,15 @@ header{
  * Change aspect of website according to width
  */
 @media screen and (min-width: 1000px) {
+    header{
+        grid-template-areas: "logo . . . . . links links social";
+    }
+
+    .logo {
+        background-image: url('../assets/logo.webp');
+        width: 350px;
+    }
+
     .skills, .team {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -63,6 +111,10 @@ header{
 }
 
 @media screen and (max-width: 1000px) and (min-width: 650px) {
+    header{
+        grid-template-areas: "logo . links links . social";
+    }
+
     .skills, .team {
         grid-template-columns: 1fr 1fr;
     }
@@ -76,6 +128,10 @@ header{
 @media screen and (max-width: 650px) {
     .skills, .team {
         grid-template-columns: 1fr;
+    }
+    header{
+        grid-template-areas: "logo social"
+                             "links links";
     }
 }
 

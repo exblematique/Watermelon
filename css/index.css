@@ -40,7 +40,7 @@ header{
 
 .logo{
     grid-area: logo;
-    background-image: url('../assets/logo_square.webp');
+    background-image: url('../assets/logo.webp');
     background-size: inherit;
     height: 117px;
     width: 117px;
@@ -101,8 +101,8 @@ header{
         grid-template-areas: "logo . . . . . links links social";
     }
 
+    /* Display complete logo and not only the pic */
     .logo {
-        background-image: url('../assets/logo.webp');
         width: 350px;
     }
 

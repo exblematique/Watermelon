@@ -7,7 +7,8 @@ body{
     flex-direction: column;
     align-items: center;
 
-    background-color: deepskyblue;
+   /* background-color: deepskyblue;*/
+    text-align: center;
     height: 300px;
     margin-top: 100px;
     margin-bottom: 25px;
@@ -153,18 +154,42 @@ header{
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+.parallax > :first-child {
+    margin-top: auto;
+}
+
+.parallax> :last-child {
+    margin-bottom: auto;
 }
 
 /* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('/w3images/parallax1.jpg');
-    min-height: 100%;
+.parallax-1 {
+    background-image: url('../assets/parallax/fond1.webp');
+    height: auto;
+    min-height: 584px;
 }
+.parallax-2 {
+    background-image: url('../assets/parallax/fond2.jpg');
+    height: auto;
+    min-height: 300px;
+}
+.parallax-2 >*{
+    color: white;
+}
+
 
 .skills-1 {
     background-image: url('../assets/skills/preproduction.webp');

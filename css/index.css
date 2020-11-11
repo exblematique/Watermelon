@@ -1,24 +1,65 @@
+
 body{
+    max-width: 1600px;
+    margin: auto;
+    padding: 0px;
     background-color: beige;
 }
 
-
-.contact > * {
-    margin: 5px;
+body > *{
+    background-color: beige;
+    font-family: "Calibri", serif;
 }
-h1, h2, h3, h4, p, a{
+
+
+.contact {
+    padding-bottom: 150px;
+}
+
+.contact > *{
+    display: block;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact > h1 {
+    padding-bottom: 20px;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+h1, h2, h3, .h3Empty, p, a{
     text-align: center;
     color: orangered;
+    padding: 50px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.h3Empty {
+    height: 20px;
+}
+.parallax > h1{
+    font-size: 30px;
+}
+header *{
+    text-transform: uppercase;
+    font-size: 30px;
 }
 
-a{
-    text-decoration: none;
-    font-size: xx-large;
+p {
+    text-align: justify;
 }
 
 header{
     display: grid;
     align-items: center;
+    padding: 20px 40px;
+}
+
+.links > a{
+    padding: 0;
 }
 
 .logo{
@@ -49,7 +90,10 @@ header{
 
 .skills, .team {
     display: grid;
-    grid-gap: 20px;
+    grid-row-gap: 20px;
+    grid-column-gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 150px;
 }
 
 .skills div, .team > div{
@@ -57,6 +101,18 @@ header{
     background-size: cover;
     display: grid;
     align-content: end;
+}
+.team > div{
+    padding-bottom: 25px;
+}
+
+.team > div > *{
+    padding: 0px;
+    margin: 0px;
+}
+
+.team > div > h2{
+    margin-bottom: 25px;
 }
 
 .skills div{
@@ -81,7 +137,7 @@ header{
  */
 @media screen and (min-width: 1000px) {
     header{
-        grid-template-areas: "logo . . . . . links links social";
+        grid-template-areas: "logo . . . . . links links . social";
     }
 
     /* Display complete logo and not only the pic */
@@ -97,16 +153,21 @@ header{
         background-image: none;
         grid-area: 1 / span 3;
         grid-template-columns: 1fr 1fr;
-        align-items: center;
+        align-items: end;
+        padding-bottom: 0px;
     }
 
     #president .img{
         visibility: visible;
-        grid-area: span 2 / 1;
+        grid-area: span 3 / 1;
     }
 
     #president *{
         color: orangered;
+    }
+
+    #president > h3:last-child{
+        align-self: start;
     }
 }
 
@@ -129,8 +190,9 @@ header{
     .skills, .team {
         grid-template-columns: 1fr;
     }
+
     header{
-        grid-template-areas: "logo social"
+        grid-template-areas: "logo  social"
                              "links links";
     }
 }
@@ -146,8 +208,10 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-        margin-top: 75px;
-        margin-bottom: 75px;
+    /*
+    margin-top: 75px;
+    margin-bottom: 75px;
+    */
 }
 .parallax > :first-child {
     margin-top: auto;

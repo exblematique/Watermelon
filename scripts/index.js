@@ -34,6 +34,9 @@ let animation = [];
 animation.push(Array.from(document.querySelectorAll(".parallax")));
 animation.push(Array.from(document.querySelectorAll(".skills > div")));
 animation.push(Array.from(document.querySelectorAll(".team > div")));
+for (let i=0; i<animation[2].length; i++){
+    if (animation[2]) let a=true;
+}
 
 /*** START ***/
 manageAnimation();

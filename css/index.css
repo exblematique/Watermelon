@@ -146,8 +146,8 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 75px;
-    margin-bottom: 75px;
+        margin-top: 75px;
+        margin-bottom: 75px;
 }
 .parallax > :first-child {
     margin-top: auto;

@@ -3,6 +3,8 @@
 function startAnimation(div){
     let children = div.children;
     for (let child=0; child < children.length; child++){
+        if (children[child].classList.contains("img"))
+            continue;
         children[child].animate([
             // keyframes
             {
@@ -34,9 +36,6 @@ let animation = [];
 animation.push(Array.from(document.querySelectorAll(".parallax")));
 animation.push(Array.from(document.querySelectorAll(".skills > div")));
 animation.push(Array.from(document.querySelectorAll(".team > div")));
-for (let i=0; i<animation[2].length; i++){
-    if (animation[2]) let a=true;
-}
 
 /*** START ***/
 manageAnimation();

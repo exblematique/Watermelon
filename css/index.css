@@ -176,9 +176,9 @@ header *{
 }
 
 @media screen and (max-width: 900px) {
-    p{font-size: 20px}
-    .contact p, a, h3{font-size: 25px}
-    .parallax > h1, h1, h2{font-size: 30px}
+    p{font-size: 16px}
+    .contact p, a, h3{font-size: 18px}
+    .parallax > h1, h1, h2{font-size: 20px}
     .skills, .team {grid-template-columns: 1fr;}
 
     header{

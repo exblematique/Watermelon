@@ -2,7 +2,7 @@
 body{
     max-width: 1600px;
     margin: auto;
-    padding: 0px;
+    padding: 0;
     background-color: beige;
 }
 
@@ -19,8 +19,7 @@ body > *{
 .contact > *{
     display: block;
     text-align: center;
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
 }
 
 .contact > h1 {
@@ -42,6 +41,9 @@ h1, h2, h3, .h3Empty, p, a{
 }
 .parallax > h1{
     font-size: 30px;
+}
+.parallax-1 > h1{
+    font-size: 50px;
 }
 header *{
     text-transform: uppercase;
@@ -67,7 +69,7 @@ header{
     background-image: url('../assets/logo.webp');
     background-size: inherit;
     height: 117px;
-    width: 117px;
+    width: 350px;
 }
 .links{
     grid-area: links;
@@ -79,7 +81,7 @@ header{
 .social{
     grid-area: social;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
 }
 
@@ -107,8 +109,8 @@ header{
 }
 
 .team > div > *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .team > div > h2{
@@ -135,14 +137,9 @@ header{
 /*
  * Change aspect of website according to width
  */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     header{
         grid-template-areas: "logo . . . . . links links . social";
-    }
-
-    /* Display complete logo and not only the pic */
-    .logo {
-        width: 350px;
     }
 
     .skills, .team {
@@ -154,7 +151,7 @@ header{
         grid-area: 1 / span 3;
         grid-template-columns: 1fr 1fr;
         align-items: end;
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
 
     #president .img{
@@ -171,9 +168,10 @@ header{
     }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 650px) {
+@media screen and (max-width: 1200px) and (min-width: 900px) {
     header{
-        grid-template-areas: "logo . links links . social";
+        grid-template-areas: "logo . . links links links"
+                             "logo . .   .   social  .";
     }
 
     .skills, .team {
@@ -186,14 +184,15 @@ header{
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 900px) {
     .skills, .team {
         grid-template-columns: 1fr;
     }
 
     header{
-        grid-template-areas: "logo  social"
-                             "links links";
+        grid-template-areas: "  .   logo  logo  logo   ."
+                             "links links links links links"
+                             "  .     .   social  .     .";
     }
 }
 

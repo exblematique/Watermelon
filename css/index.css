@@ -28,7 +28,7 @@ h1, h2, h3, .h3Empty, p, a{
 h1, h2 {text-transform: uppercase;}
 .h3Empty{height: 20px;}
 p{text-align: justify;}
-i > span{opacity: 0;}
+header span{font-size: 0;}
 
 /*
  * HEADER
@@ -185,5 +185,6 @@ header *{
         grid-template-areas: "  .    logo  ."
                              "links links links"
                              "  .   social .";
+        padding: 20px 0;
     }
 }

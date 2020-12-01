@@ -163,7 +163,7 @@ header *{
     #president > h3:last-child{align-self: start;}
 }
 
-@media screen and (max-width: 1200px) and (min-width: 900px) {
+@media screen and (max-width: 1200px) and (min-width: 900px){
     header{
         grid-template-areas: "logo . . links links links"
                              "logo . .   .   social  .";
@@ -176,15 +176,25 @@ header *{
 }
 
 @media screen and (max-width: 900px) {
-    p{font-size: 16px}
-    .contact p, a, h3{font-size: 18px}
-    .parallax > h1, h1, h2{font-size: 20px}
-    .skills, .team {grid-template-columns: 1fr;}
+    @media screen and (orientation: portrait){
+        p{font-size: 16px}
+        .contact p, a, h3{font-size: 18px}
+        .parallax > h1, h1, h2{font-size: 20px}
+        .skills, .team {grid-template-columns: 1fr;}
 
-    header{
-        grid-template-areas: "  .    logo  ."
-                             "links links links"
-                             "  .   social .";
-        padding: 20px 0;
+        header{
+            grid-template-areas: "  .    logo  ."
+                                 "links links links"
+                                 "  .   social .";
+            padding: 20px 0;
+        }
+    }
+    @media screen and (orientation: landscape) {
+        header{
+            grid-template-areas: "logo . . links links links"
+                             "logo . .   .   social  .";
+        }
+        .skills, .team {grid-template-columns: 1fr 1fr;}
+        .skills-3 {grid-area: 2 / span 2;}
     }
 }

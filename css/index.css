@@ -73,8 +73,7 @@ header *{
  * Create a Parallax Effect
  */
 .parallax {
-    background-attachment: fixed;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;
@@ -176,18 +175,20 @@ header *{
 }
 
 @media screen and (max-width: 900px) {
-    @media screen and (orientation: portrait){
-        p{font-size: 16px}
-        .contact p, a, h3{font-size: 18px}
-        .parallax > h1, h1, h2{font-size: 20px}
-        .skills, .team {grid-template-columns: 1fr;}
+    p{font-size: 16px}
+    .contact p, a, h3{font-size: 18px}
+    .parallax > h1, h1, h2{font-size: 20px}
+    .parallax-1{height: 500px;}
 
+    @media screen and (orientation: portrait){
         header{
             grid-template-areas: "  .    logo  ."
                                  "links links links"
                                  "  .   social .";
             padding: 20px 0;
         }
+        .skills, .team {grid-template-columns: 1fr;}
+        .parallax-1{min-height: auto}
     }
     @media screen and (orientation: landscape) {
         header{

@@ -1,201 +1,52 @@
-/* General settings */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+
 body{
-    max-width: 1600px;
-    margin: auto;
-    padding: 0;
-    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/parallax/fond1.webp");
+    background-color: #68A2FE;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-body > *{
-    background-color: beige;
-    font-family: "Calibri", serif;
-}
-
-h1, h2, h3, .h3Empty, p, a{
-    text-align: center;
-    color: orangered;
-    padding: 50px;
-    font-size: 20px;
+h1, a{
+    /*text-align: center;*/
+    color: white;
+    /*padding: 50px;
+    font-size: 20px;*/
     text-decoration: none;
 }
-
-.img{
-    height: inherit;
-    background-size: cover;
-    visibility: hidden;
-}
-
-h1, h2 {text-transform: uppercase;}
-.h3Empty{height: 20px;}
-p{text-align: justify;}
-header span{font-size: 0;}
 
 /*
  * HEADER
  */
-header{
-    display: grid;
-    grid-row-gap: 15px;
+header {
+    display: inline-flex;
     align-items: center;
-    padding: 20px 40px;
+    justify-content: space-between;
+    padding: 30px 60px;
 }
 
+
 header *{
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 30px;
 }
+
 .logo{
-    grid-area: logo;
-    margin: auto;
+    margin: auto 0;
     height: auto;
     width: auto;
 }
-.links{
-    grid-area: links;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-}
-.links > a{padding: 0;}
-.social{
-    grid-area: social;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-}
 
-.social > a{
-    padding: 10px;
-    font-size: xx-large;
-}
-
-/*
- * Create a Parallax Effect
- */
-.parallax {
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display:flex;
+/* BODY */
+.wrapper{
+    display: inline-flex;
+    align-items: center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    min-height: 550px;
-}
-.parallax > :first-child {margin-top: auto;}
-.parallax > :last-child {margin-bottom: auto;}
-.parallax > h1{font-size: 30px;}
-.parallax-1 > h1{font-size: 50px;}
-.parallax-1 {background-image: url('../assets/parallax/fond1.webp');}
-.parallax-2 {background-image: url('../assets/parallax/fond2.jpg');}
-.parallax-2 > * {color: white;}
-
-/*
- * SKILLS AND TEAM
- */
-.skills, .team {
-    display: grid;
-    grid-row-gap: 20px;
-    grid-column-gap: 40px;
-    padding-top: 20px;
-    padding-bottom: 150px;
-}
-
-.skills div, .team > div{
-    height: 500px;
-    background-size: cover;
-    display: grid;
-    align-content: end;
-}
-.skills div *, .team div *{color: aliceblue;}
-
-/*SKILLS*/
-.skills div{height: 600px;}
-.skills-1 {background-image: url('../assets/skills/preproduction.webp');}
-.skills-2 {background-image: url('../assets/skills/development.webp');}
-.skills-3 {background-image: url('../assets/skills/postproduction.webp');}
-
-/* TEAM */
-.team > div > *{
-    padding: 0;
-    margin: 0;
-}
-.team > div{padding-bottom: 25px;}
-.team > div > h2{margin-bottom: 25px;}
-#president, #president .img{background-image: url('../assets/team/xavier.webp');}
-
-
-/*
- * CONTACT
- */
-.contact > *{
-    display: block;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-.contact{padding-bottom: 150px;}
-.contact > h1 {padding-bottom: 20px;}
-
-/*
- * Change aspect of website according to width
- */
-@media screen and (min-width: 1200px) {
-    header{grid-template-areas: "logo . . . . . links links . social";}
-    .skills, .team {grid-template-columns: 1fr 1fr 1fr;}
-
-    #president{
-        background-image: none;
-        grid-area: 1 / span 3;
-        grid-template-columns: 1fr 1fr;
-        align-items: end;
-        padding-bottom: 0;
-    }
-
-    #president .img{
-        visibility: visible;
-        grid-area: span 3 / 1;
-    }
-
-    #president *{color: orangered;}
-    #president > h3:last-child{align-self: start;}
-}
-
-@media screen and (max-width: 1200px) and (min-width: 900px){
-    header{
-        grid-template-areas: "logo . . links links links"
-                             "logo . .   .   social  .";
-    }
-
-    .skills, .team {grid-template-columns: 1fr 1fr;}
-
-    /* Complete grid for 3 images in 2*2 grid */
-    .skills-3 {grid-area: 2 / span 2;}
-}
-
-@media screen and (max-width: 900px) {
-    p{font-size: 16px}
-    .contact p, a, h3{font-size: 18px}
-    .parallax > h1, h1, h2{font-size: 20px}
-    .parallax-1{height: 500px;}
-
-    @media screen and (orientation: portrait){
-        header{
-            grid-template-areas: "  .    logo  ."
-                                 "links links links"
-                                 "  .   social .";
-            padding: 20px 0;
-        }
-        .skills, .team {grid-template-columns: 1fr;}
-        .parallax-1{min-height: auto}
-    }
-    @media screen and (orientation: landscape) {
-        header{
-            grid-template-areas: "logo . . links links links"
-                             "logo . .   .   social  .";
-        }
-        .skills, .team {grid-template-columns: 1fr 1fr;}
-        .skills-3 {grid-area: 2 / span 2;}
-    }
 }

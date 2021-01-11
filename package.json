@@ -13,11 +13,12 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "npm-check": "^5.9.2",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^6.8.0",
+    "eslint": "^7.17.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-vue": "^7.4.1"

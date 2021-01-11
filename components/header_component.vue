@@ -8,13 +8,3 @@
     </div>
   </header>
 </template>
-
-<script>
-export default {
-name: "header_component"
-}
-</script>
-
-<style scoped>
-
-</style>

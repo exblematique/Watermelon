@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-image: url("/background/fond1.webp");
+  background-color: #68A2FE;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1, a{
+  color: white;
+  text-decoration: none;
+}
+
+/*
+ * HEADER
+ */
+header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 60px;
+}
+
+
+header *{
+  font-size: 30px;
+}
+
+.logo{
+  margin: auto 0;
+  height: auto;
+  width: auto;
+}
+
+/* BODY */
+.wrapper{
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+}

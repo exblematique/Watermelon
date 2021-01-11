@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <header_component/>
     <nuxt/>
   </div>
@@ -9,3 +9,10 @@
 import header_component from "@/components/header_component";
 export default { components: {  header_component } }
 </script>
+
+<style>
+.app{
+  display: flex;
+  flex-direction: column;
+}
+</style>

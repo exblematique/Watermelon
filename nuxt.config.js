@@ -5,6 +5,11 @@ export default {
   // Disable loading
   loading: false,
 
+  // Disbale prefetch
+  router: {
+    prefetchLinks: false
+  },
+
   // Enable to create static files
   // Options are 'server' or 'static'
   target: 'server',

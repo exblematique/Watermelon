@@ -1,10 +1,20 @@
 <template>
   <header>
-    <img class="logo" src="/logo.webp" alt="Logo de l'association Watermelon"/>
+    <img
+      class="logo"
+      src="/logo.webp"
+      alt="Logo de l'association Watermelon"
+    >
     <div class="links">
-      <a href="/">Accueil</a>
-      <a href="team">Équipe</a>
-      <a href="contact">Contact</a>
+      <NuxtLink to="/">
+        Accueil
+      </NuxtLink>
+      <NuxtLink to="/team">
+        Équipe
+      </NuxtLink>
+      <NuxtLink to="/contact">
+        Contact
+      </NuxtLink>
     </div>
   </header>
 </template>

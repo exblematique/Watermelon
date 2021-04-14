@@ -12,6 +12,7 @@ $ npm install # Or yarn install
 $ npm run dev
 
 # build for production and launch server
+$ npm install --production
 $ npm run build
 $ npm start
 

@@ -5,6 +5,10 @@ export default {
   // Disable loading
   loading: false,
 
+  // Enable to create static files
+  // Options are 'server' or 'static'
+  target: 'server',
+
   // Headers of the page
   head: {
     title: 'Watermelon',

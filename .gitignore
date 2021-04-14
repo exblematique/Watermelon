@@ -12,3 +12,4 @@ dist
 
 # Webstorm files
 .idea/
+/package-lock.json

@@ -12,4 +12,7 @@ dist
 
 # Webstorm files
 .idea/
+
+# Generate files
 /package-lock.json
+/.eslintcache

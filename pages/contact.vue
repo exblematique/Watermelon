@@ -1,10 +1,10 @@
 <template>
-  <h1>Ceci est l'équipe</h1>
+  <h1>Ceci est la page de contact</h1>
 </template>
 
 <script>
 export default {
-  name: "Team"
+  name: "Contact"
 }
 </script>
 

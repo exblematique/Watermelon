@@ -21,11 +21,11 @@ export default {
         {
           name: "Bouquet Xavier",
           roles: ["Président de l'association", "Monteur"],
-          img: "xavier.webp"
+          img: "background-image: url('xavier.webp')"
         },{
           name: "Signaire Caroline",
           roles: ["Trésorière", "Monteuse"],
-          img: "caroline.webp"
+          img: "background-image: url('caroline.webp')"
         }
       ]
     }

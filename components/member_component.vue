@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :style="member.img">
     <h2>{{ member.name }}</h2>
     <h3
       v-for="(role, index) in member.roles"
@@ -20,12 +20,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-/*
-  TODO Change image to custom url
-  style="background-image: url('team/{{ member.img }}');"
- */
-div {
-  background-image: url("static/team/xavier.webp");
-}
-</style>

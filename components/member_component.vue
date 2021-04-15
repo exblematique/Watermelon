@@ -1,5 +1,5 @@
 <template>
-  <div :style="member.img">
+  <div :style="member.style">
     <h2>{{ member.name }}</h2>
     <h3
       v-for="(role, index) in member.roles"

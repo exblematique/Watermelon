@@ -10,25 +10,18 @@
 </template>
 
 <script>
+// Import custom component to display one member
 import member_component from "@/components/member_component";
+
+// Import list of member and setting background picture
+import team from '@/database/teamMembers.json';
+for (let i=0; i<team.length; i++)
+  team[i].style = "background-image: url('/team/" + team[i].img + "');";
+
+// Setup this vue
 export default {
   name: "Team",
   components: {member_component},
-  data : () => {
-    return {
-      // TODO: move team information in .json file
-      team: [
-        {
-          name: "Bouquet Xavier",
-          roles: ["Président de l'association", "Monteur"],
-          img: "background-image: url('xavier.webp')"
-        },{
-          name: "Signaire Caroline",
-          roles: ["Trésorière", "Monteuse"],
-          img: "background-image: url('caroline.webp')"
-        }
-      ]
-    }
-  }
+  data : () => {return {team : team};}
 }
 </script>

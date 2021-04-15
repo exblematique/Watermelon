@@ -1,5 +1,7 @@
 <template>
-  <div :style="member.style">
+  <div
+    :style="member.style"
+  >
     <h2>{{ member.name }}</h2>
     <h3
       v-for="(role, index) in member.roles"
@@ -20,3 +22,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+div {
+  width: 350px;
+}
+h2 {
+  margin-top: 350px;
+}
+</style>

@@ -50,11 +50,3 @@ header *{
   height: auto;
   width: auto;
 }
-
-/* BODY */
-section{
-  display: inline-flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}

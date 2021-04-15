@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section>
     <img
       src="/logo.webp"
       alt="Logo de l'association Watermelon"

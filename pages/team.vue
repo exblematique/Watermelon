@@ -1,12 +1,12 @@
 <template>
-  <div id="team">
+  <section>
     <h1>Ceci est l'équipe</h1>
     <member_component
       v-for="(member, index) in team"
       :key="index"
       :member="member"
     />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -32,7 +32,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

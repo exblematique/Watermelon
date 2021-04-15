@@ -1,9 +1,11 @@
 <template>
-  <h1 v-if="error.statusCode === 404">
-    Désolé vous vous êtes perdu, il n'y a rien ici
-  </h1> <h1 v-else>
-    Oupsi, il n'y a une erreur chez nous
-  </h1>
+  <section>
+    <h1 v-if="error.statusCode === 404">
+      Désolé vous vous êtes perdu, il n'y a rien ici
+    </h1> <h1 v-else>
+      Oupsi, il n'y a une erreur chez nous
+    </h1>
+  </section>
 </template>
 
 <script>
@@ -17,7 +19,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

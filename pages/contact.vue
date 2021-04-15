@@ -1,5 +1,7 @@
 <template>
-  <h1>Ceci est la page de contact</h1>
+  <section>
+    <h1>Ceci est la page de contact</h1>
+  </section>
 </template>
 
 <script>

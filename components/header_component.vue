@@ -18,3 +18,10 @@
     </div>
   </header>
 </template>
+
+<style scoped>
+div {
+  height: auto;
+  width: auto;
+}
+</style>

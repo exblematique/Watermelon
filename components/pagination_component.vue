@@ -11,6 +11,7 @@
         v-for="(element, index) in elementsToDisplay"
         :key="index"
         :data="element"
+        :type="componentType"
       />
       <button
         :disabled="isNextButtonDisabled"
@@ -51,9 +52,9 @@ export default {
       type: Number,
       default: 1
     },
-    componentsToDisplay:{
+    componentType: {
       type: String,
-      default: "@/components/member_component"
+      default: 'default'
     }
   },
   data() {
@@ -120,7 +121,6 @@ export default {
 
 <style scoped>
 #view {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -128,6 +128,7 @@ export default {
 #elements {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 

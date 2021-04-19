@@ -1,10 +1,10 @@
 <template>
   <div
-    :style="member.style"
+    :style="data.style"
   >
-    <h2>{{ member.name }}</h2>
+    <h2>{{ data.name }}</h2>
     <h3
-      v-for="(role, index) in member.roles"
+      v-for="(role, index) in data.roles"
       :key="index"
     >
       {{ role }}
@@ -13,9 +13,9 @@
 </template>
 <script>
 export default {
-  layout: 'member',
+  layout: 'memberOfTeam',
   props: {
-    member: {
+    data: {
       type: Object,
       default: null
     }
@@ -25,12 +25,10 @@ export default {
 
 <style scoped>
 div {
+  height: 500px;
   width: 350px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-h2 {
-  margin-top: 350px;
+  justify-content: flex-end;
 }
 </style>

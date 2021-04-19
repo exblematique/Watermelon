@@ -101,10 +101,10 @@ export default {
 
       // Retrieve information from database
       // And send to display
-      this.elementToDisplay = [];
+      this.elementsToDisplay = [];
       const startIndex = (this.currentPage - 1) * this.visibleItemsPerPage;
       for (let i=0; i<this.visibleItemsPerPage; i++)
-        this.elementToDisplay.push(
+        this.elementsToDisplay.push(
             this.listOfElements[startIndex + i]
         );
     },

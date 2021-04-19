@@ -9,10 +9,7 @@ export default {
   layout: 'element',
   props: {
     data: {
-      type: Object,/* TODO REMOVE{
-        title: String,
-        description: String
-      },*/
+      type: Object,
       default: null
     }
   }

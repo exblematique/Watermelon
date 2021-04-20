@@ -139,6 +139,11 @@ button {
   flex-shrink: 0;
   border-radius: 50%;
   background-color: rgba(169, 169, 169, 0.4);
+  cursor: pointer;
+}
+
+button:disabled{
+  cursor: default;
 }
 
 #elements button{

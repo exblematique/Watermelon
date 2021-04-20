@@ -121,7 +121,7 @@ export default {
 <style scoped>
 #pagination{
   height: auto;
-  margin-bottom: 100px;
+  margin-bottom: 25px;
 }
 #view {
   display: flex;
@@ -150,7 +150,7 @@ button:disabled{
 #elements button{
   height: 100px;
   width: 100px;
-  margin: 0 100px;
+  margin: 0 50px;
   border: 5px solid white;
   color: white;
   font-weight: bold;

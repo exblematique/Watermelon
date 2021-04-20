@@ -22,7 +22,7 @@ export default {
   name: "Team",
   static: {
     items: teamMembers,
-    visibleItemsPerPage: 1,
+    visibleItemsPerPage: 3,
     componentType: 'member_of_team'
   },
   components: {

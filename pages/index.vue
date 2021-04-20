@@ -7,3 +7,8 @@
     <h1>Association de réalisation et production audiovisuelle</h1>
   </section>
 </template>
+<style scoped>
+img {
+  margin: 0 auto;
+}
+</style>

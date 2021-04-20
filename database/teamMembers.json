@@ -7,5 +7,37 @@
     "name": "Signaire Caroline",
     "roles": ["Trésorière", "Monteuse"],
     "img": "caroline.webp"
+  },{
+    "name": "Canevet Océane",
+    "roles": ["Responsable com","Monteuse"],
+    "img": "oceane.webp"
+  },{
+    "name": "Bouché Alexandre",
+    "roles": ["Cadreur"],
+    "img": "alexandre.webp"
+  },{
+    "name": "Pognant-Gros Johan",
+    "roles": ["Cadreur"],
+    "img": "johan.webp"
+  },{
+    "name": "Jouslin Aurélie",
+    "roles": ["Cadreuse"],
+    "img": "aurelie.webp"
+  },{
+    "name": "Gazeau Aigline",
+    "roles": ["Ingenieure du son"],
+    "img": "aigline.webp"
+  },{
+    "name": "Berling Morgane",
+    "roles": ["Actrice"],
+    "img": "morgane.webp"
+  },{
+    "name": "Duguey Claire",
+    "roles": ["Animatrice 3D"],
+    "img": "claire.webp"
+  },{
+    "name": "Megier Gaspard",
+    "roles": ["Compositeur"],
+    "img": "gaspard.webp"
   }
 ]

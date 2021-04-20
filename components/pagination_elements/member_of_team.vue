@@ -26,9 +26,16 @@ export default {
 <style scoped>
 div {
   height: 500px;
-  width: 350px;
+  width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+}
+h2 {
+  margin-top: 375px;
+}
+
+h3{
+  margin: 5px;
 }
 </style>

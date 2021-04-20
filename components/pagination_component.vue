@@ -60,9 +60,7 @@ export default {
       elementsToDisplay : [],
       currentPage: 1,
       // Number of pages available to display
-      pageCount: Math.ceil(
-          (this.listOfElements.length + this.visibleItemsPerPage - 1) / this.visibleItemsPerPage
-      )
+      pageCount: Math.ceil(this.listOfElements.length / this.visibleItemsPerPage)
     }
   },
   // Create functions to disable buttons
@@ -102,10 +100,13 @@ export default {
       // And send to display
       this.elementsToDisplay = [];
       const startIndex = (this.currentPage - 1) * this.visibleItemsPerPage;
-      for (let i=0; i<this.visibleItemsPerPage; i++)
-        this.elementsToDisplay.push(
-            this.listOfElements[startIndex + i]
-        );
+      for (let i=0; i<this.visibleItemsPerPage; i++){
+        //Check if the element exists in array
+        if (startIndex+i < this.listOfElements.length)
+          this.elementsToDisplay.push(
+              this.listOfElements[startIndex + i]
+          );
+      }
     },
     nextPage() {
       this.pageChangeHandle('next');

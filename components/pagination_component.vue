@@ -5,7 +5,7 @@
         :disabled="isPreviousButtonDisabled"
         @click="previousPage"
       >
-        ←
+        &#60;
       </Button>
       <componentsToDisplay
         v-for="(element, index) in elementsToDisplay"
@@ -17,7 +17,7 @@
         :disabled="isNextButtonDisabled"
         @click="nextPage"
       >
-        →
+        &#62;
       </button>
     </div>
     <div id="pagination">
@@ -26,9 +26,7 @@
         :key="i"
         :disabled="i === currentPage"
         @click="pageChangeHandle(i)"
-      >
-        {{ i }}
-      </button>
+      />
     </div>
   </div>
 </template>
@@ -120,6 +118,10 @@ export default {
 </script>
 
 <style scoped>
+#pagination{
+  height: auto;
+  margin-bottom: 100px;
+}
 #view {
   display: flex;
   flex-direction: column;
@@ -133,7 +135,35 @@ export default {
 }
 
 button {
+  /* To prevent changing button size */
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: rgba(169, 169, 169, 0.4);
+}
+
+#elements button{
   height: 100px;
   width: 100px;
+  margin: 0 100px;
+  border: 5px solid white;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#elements button:disabled {
+  color: darkgrey;
+  border-color: darkgrey;
+}
+
+#pagination button {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px;
+  border: 2px solid white;
+}
+
+#pagination button:disabled {
+  background: white;
 }
 </style>

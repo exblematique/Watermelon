@@ -14,23 +14,23 @@ body{
 
 /** General information **/
 .app{
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 section {
-  height: 100%;
   display: inline-flex;
-  align-items: center;
   flex-direction: column;
   text-align: center;
 }
 
-div, h2, h3, p {
+div, h2, h3, p, section {
   width: 100%;
 }
 
+div, section {
+  height: 100%;
+}
 
 h1, a{
   color: white;

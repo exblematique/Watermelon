@@ -15,7 +15,8 @@
   "dependencies": {
     "npm": "^7.9.0",
     "npm-check": "^5.9.2",
-    "nuxt": "^2.15.4"
+    "nuxt": "^2.15.4",
+    "nuxt-ssr-screen-size": "^1.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",

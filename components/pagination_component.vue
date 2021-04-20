@@ -32,6 +32,8 @@
 </template>
 
 <script>
+// Import library to manage randing when screen change size
+import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
 // Import custom component to display only few elements
 import componentsToDisplay from "@/components/pagination_item_component";
 
@@ -40,6 +42,7 @@ export default {
   components: {
     componentsToDisplay
   },
+  mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin],
   layout: 'pagination',
   props: {
     listOfElements: {
@@ -59,8 +62,10 @@ export default {
     return {
       elementsToDisplay : [],
       currentPage: 1,
+      // Number of element to display according to width
+      currentVisibleItemsPerPage: 1,
       // Number of pages available to display
-      pageCount: Math.ceil(this.listOfElements.length / this.visibleItemsPerPage)
+      pageCount: 1
     }
   },
   // Create functions to disable buttons
@@ -75,14 +80,39 @@ export default {
 
   // Call this function when page is call for the first time
   async mounted(){
-    for (let i=0; i<this.visibleItemsPerPage; i++)
-      this.elementsToDisplay.push(
-          this.listOfElements[i]
-      );
+    this.updateSize();
+    this.renderVue();
   },
 
   // Methods available
   methods: {
+    // Update size of program
+    updateSize(){
+      // Calculate quantity of elements in page
+      // According to some tests that I made
+      // If negative or null, only 1 element can be display
+      let maxItemsWithSize = Math.ceil((this.$vssWidth - 1100)/300) + 1;
+      if (maxItemsWithSize < 1)
+        maxItemsWithSize = 1;
+
+      //Then update values
+      this.currentVisibleItemsPerPage = Math.min(maxItemsWithSize, this.visibleItemsPerPage);
+      this.pageCount = Math.ceil(this.listOfElements.length / this.currentVisibleItemsPerPage);
+    },
+    // To render a vue
+    renderVue(){
+      // Retrieve information from database
+      // And send to display
+      this.elementsToDisplay = [];
+      const startIndex = (this.currentPage - 1) * this.currentVisibleItemsPerPage;
+      for (let i=0; i<this.currentVisibleItemsPerPage; i++){
+        //Check if the element exists in array
+        if (startIndex+i < this.listOfElements.length)
+          this.elementsToDisplay.push(
+              this.listOfElements[startIndex + i]
+          );
+      }
+    },
     // To change page
     pageChangeHandle (value){
       switch (value) {
@@ -95,18 +125,7 @@ export default {
         default:
           this.currentPage = parseInt(value);
       }
-
-      // Retrieve information from database
-      // And send to display
-      this.elementsToDisplay = [];
-      const startIndex = (this.currentPage - 1) * this.visibleItemsPerPage;
-      for (let i=0; i<this.visibleItemsPerPage; i++){
-        //Check if the element exists in array
-        if (startIndex+i < this.listOfElements.length)
-          this.elementsToDisplay.push(
-              this.listOfElements[startIndex + i]
-          );
-      }
+      this.renderVue();
     },
     nextPage() {
       this.pageChangeHandle('next');

@@ -1,11 +1,9 @@
 <template>
-  <transition name="opacity">
-    <component
-      :is="component"
-      v-if="visible && component"
-      :data="data"
-    />
-  </transition>
+  <component
+    :is="component"
+    v-if="visible && component"
+    :data="data"
+  />
 </template>
 
 <script>

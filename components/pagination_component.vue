@@ -7,13 +7,18 @@
       >
         &#60;
       </Button>
-      <componentsToDisplay
-        v-for="(element, index) in elementsToDisplay"
-        :key="index"
-        :data="element"
-        :type="componentType"
-        :visible-time="(index + 1) * timeBetweenEachAnimation"
-      />
+      <transition-group
+        name="opacity"
+        tag="span"
+      >
+        <componentsToDisplay
+          v-for="(element, index) in elementsToDisplay"
+          :key="element"
+          :data="element"
+          :type="componentType"
+          :visible-time="(index + 1) * timeBetweenEachAnimation"
+        />
+      </transition-group>
       <button
         :disabled="isNextButtonDisabled"
         @click="nextPage"
@@ -242,5 +247,29 @@ button:disabled{
 
 #pagination button:disabled {
   background: white;
+}
+
+/* ANIMATION */
+span{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.opacity-enter-active {
+  animation: opacity .5s;
+}
+.opacity-leave-active {
+  animation: opacity .5s reverse;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 </style>

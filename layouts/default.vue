@@ -1,7 +1,10 @@
 <template>
   <div class="app">
     <header_component />
-    <transition name="grow">
+    <transition
+      name="grow"
+      mode="in-out"
+    >
       <nuxt />
     </transition>
   </div>

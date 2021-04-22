@@ -19,16 +19,19 @@ body{
 }
 
 section {
+  height: 75%;
+  width: 90%;
+  margin: auto;
   display: inline-flex;
   flex-direction: column;
   text-align: center;
 }
 
-div, h2, h3, p, section {
+div, h2, h3, p {
   width: 100%;
 }
 
-div, section {
+div {
   height: 100%;
 }
 

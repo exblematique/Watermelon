@@ -34,6 +34,7 @@
 <script>
 // Import library to manage randing when screen change size
 import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
+
 // Import custom component to display only few elements
 import componentsToDisplay from "@/components/pagination_item_component";
 
@@ -80,14 +81,33 @@ export default {
 
   // Call this function when page is call for the first time
   async mounted(){
-    this.updateSize();
-    this.renderVue();
+    this.vssEvent = this.test;
+    this.updateSizeAndRender();
+
+    //TODO TEST
+    console.log(this.$vssEvent)
+  },
+
+  // Setup event when this component is created
+  created() {
+    //TODO TEST
+    console.log(this.$vssEvent)
+    //this.$vssEvent.on('resize', this.updateSizeAndRender);
   },
 
   // Methods available
   methods: {
+    //TODO TEST
+    test(){
+      console.log("TESSSSSSSSSSST");
+    },
+    /*vssEvent($vssEvent){
+      this.updateSize();
+      this.renderVue();
+    },*/
+
     // Update size of program
-    updateSize(){
+    updateSizeAndRender(){
       // Calculate quantity of elements in page
       // According to some tests that I made
       // If negative or null, only 1 element can be display
@@ -98,6 +118,9 @@ export default {
       //Then update values
       this.currentVisibleItemsPerPage = Math.min(maxItemsWithSize, this.visibleItemsPerPage);
       this.pageCount = Math.ceil(this.listOfElements.length / this.currentVisibleItemsPerPage);
+
+      //Then render vue
+      this.renderVue()
     },
     // To render a vue
     renderVue(){
@@ -169,7 +192,6 @@ button:disabled{
 #elements button{
   height: 100px;
   width: 100px;
-  margin: 0 50px;
   border: 5px solid white;
   color: white;
   font-weight: bold;

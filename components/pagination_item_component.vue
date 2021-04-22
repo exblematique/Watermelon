@@ -49,6 +49,8 @@ export default {
           this.component = () => import('@/components/pagination_elements/default')
         })
         .finally(() => {
+          //TODO REMOVE
+          console.log(this.visibleTime)
           setTimeout(() => this.visible = true, this.visibleTime);
         });
   }

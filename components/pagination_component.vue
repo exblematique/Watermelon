@@ -12,11 +12,11 @@
         tag="span"
       >
         <componentsToDisplay
-          v-for="(element, index) in elementsToDisplay"
-          :key="element"
+          v-for="element in elementsToDisplay"
+          :key="element.index"
           :data="element"
           :type="componentType"
-          :visible-time="(index + 1) * timeBetweenEachAnimation"
+          :visible-time="(element.index + 1 - (currentPage - 1) * currentVisibleItemsPerPage) * timeBetweenEachAnimation"
         />
       </transition-group>
       <button
@@ -71,6 +71,7 @@ export default {
   },
   data() {
     return {
+      listOfElementsWithIndex: this.createIndex(this.listOfElements),
       elementsToDisplay : [],
       currentPage: 1,
       // Number of element to display according to width
@@ -119,7 +120,12 @@ export default {
       this.updateSize();
       this.renderVue();
     },*/
-
+    createIndex(array){
+      let output = [...array];
+      for (let i=0; i<output.length; i++)
+        output[i]['index'] = i;
+      return output;
+    },
     // Update size of program
     updateSizeAndRender(){
       // Calculate quantity of elements in page
@@ -144,9 +150,9 @@ export default {
       const startIndex = (this.currentPage - 1) * this.currentVisibleItemsPerPage;
       for (let i=0; i<this.currentVisibleItemsPerPage; i++){
         //Check if the element exists in array
-        if (startIndex+i < this.listOfElements.length)
+        if (startIndex+i < this.listOfElementsWithIndex.length)
           this.elementsToDisplay.push(
-              this.listOfElements[startIndex + i]
+              this.listOfElementsWithIndex[startIndex + i]
           );
       }
     },

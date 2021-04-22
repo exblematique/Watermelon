@@ -49,26 +49,8 @@ export default {
           this.component = () => import('@/components/pagination_elements/default')
         })
         .finally(() => {
-          //TODO REMOVE
-          console.log(this.visibleTime)
           setTimeout(() => this.visible = true, this.visibleTime);
         });
   }
 }
 </script>
-<style scoped>
-.opacity-enter-active {
-  animation: opacity .5s;
-}
-.opacity-leave-active {
-  animation: opacity .5s reverse;
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-</style>

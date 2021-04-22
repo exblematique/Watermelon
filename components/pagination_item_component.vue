@@ -1,9 +1,11 @@
 <template>
-  <component
-    :is="component"
-    v-if="component"
-    :data="data"
-  />
+  <transition name="opacity">
+    <component
+      :is="component"
+      v-if="visible && component"
+      :data="data"
+    />
+  </transition>
 </template>
 
 <script>
@@ -17,11 +19,16 @@ export default {
     'type': {
       type: String,
       default: 'default'
+    },
+    'visibleTime': {
+      type: Number,
+      default: 0
     }
   },
   data () {
     return {
-      component: null
+      component: null,
+      visible: false
     }
   },
   computed: {
@@ -32,6 +39,9 @@ export default {
       return () => import(`@/components/pagination_elements/${this.type}`)
     }
   },
+  // When page is mounted
+  // Load the corresponding component
+  // Then create timer to display each element
   mounted() {
     this.loader()
         .then(() => {
@@ -40,6 +50,25 @@ export default {
         .catch(() => {
           this.component = () => import('@/components/pagination_elements/default')
         })
+        .finally(() => {
+          setTimeout(() => this.visible = true, this.visibleTime);
+        });
   }
 }
 </script>
+<style scoped>
+.opacity-enter-active {
+  animation: opacity .5s;
+}
+.opacity-leave-active {
+  animation: opacity .5s reverse;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+</style>

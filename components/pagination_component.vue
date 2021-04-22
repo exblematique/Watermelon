@@ -12,6 +12,7 @@
         :key="index"
         :data="element"
         :type="componentType"
+        :visible-time="(index + 1) * timeBetweenEachAnimation"
       />
       <button
         :disabled="isNextButtonDisabled"
@@ -57,6 +58,10 @@ export default {
     componentType: {
       type: String,
       default: 'default'
+    },
+    timeBetweenEachAnimation: {
+      type: Number,
+      default: 500
     }
   },
   data() {
@@ -66,7 +71,11 @@ export default {
       // Number of element to display according to width
       currentVisibleItemsPerPage: 1,
       // Number of pages available to display
-      pageCount: 1
+      pageCount: 1,
+      //To manage animation successive
+      elementsLoad: 0,
+      // Timer to load next item
+      nextLoad: 0
     }
   },
   // Create functions to disable buttons
@@ -136,6 +145,28 @@ export default {
           );
       }
     },
+    // TODO TEMP Return time when a element must be displayed
+    // According to variable "nextLoad"
+    displayElementTime(index){
+      const currentDate = new Date();
+      return currentDate.getTime() + index * this.timeBetweenEachAnimation;
+    },
+    /* TODO REMOVE
+    // Return true when a element must be displayed
+    // According to variable "nextLoad"
+    async displayElementTime(index){
+      if (index === this.elementsLoad){
+        const currentDate = new Date();
+        if (this.nextLoad < currentDate.getTime()){
+          this.nextLoad = currentDate.getTime() + this.timeBetweenEachAnimation;
+          this.elementsLoad++;
+        }
+      }
+      //TODO remove
+      console.log(index + ": " + (this.elementsLoad > index ? "true" : "false"));
+      return this.elementsLoad > index;
+    },*/
+
     // To change page
     pageChangeHandle (value){
       switch (value) {
@@ -163,7 +194,6 @@ export default {
 <style scoped>
 #pagination{
   height: auto;
-  margin-bottom: 25px;
 }
 #view {
   display: flex;

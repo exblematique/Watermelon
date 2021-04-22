@@ -30,6 +30,8 @@ div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h2 {
   margin-top: 375px;

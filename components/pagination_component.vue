@@ -264,17 +264,26 @@ span{
   width: 100%;
   height: 100%;
 }
+
+span > *{
+  flex: 1;
+}
+
 .opacity-enter-active {
   animation: opacity .5s;
 }
 .opacity-leave-active {
-  animation: opacity .5s reverse;
+  animation: opacity .25s reverse;
 }
 @keyframes opacity {
   0% {
     opacity: 0;
+    flex: 0;
   }
-  100% {
+  50%{
+    flex: 1;
+  }
+  100%{
     opacity: 100%;
   }
 }

@@ -1,9 +1,13 @@
 <template>
-  <component
-    :is="component"
-    v-if="visible && component"
-    :data="data"
-  />
+  <span
+    v-if="visible"
+  >
+    <component
+      :is="component"
+      v-if="component"
+      :data="data"
+    />
+  </span>
 </template>
 
 <script>

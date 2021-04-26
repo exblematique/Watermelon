@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/abilities", {data:[{}],fetch:{},mutations:void 0});

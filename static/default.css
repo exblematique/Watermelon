@@ -1,12 +1,10 @@
-html, body {
+html, body, .app {
   height: 100%;
   margin: 0;
   min-width: 650px;
 }
 
 body{
-  display: flex;
-  flex-direction: column;
   background-image: url("/background/fond1.webp");
   background-color: #68A2FE;
   background-repeat: no-repeat;
@@ -26,11 +24,19 @@ h1, h2, h3, a, p {
   flex-direction: column;
 }**/
 
+.app div {
+  height: 100%;
+}
+
 section {
-  height: 75%;
-  width: 95%;
+  position: absolute;
+  bottom: 0;
+  height: calc(100% - 200px);
+  width: 100%;
   margin: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 div, h2, h3, p {

@@ -76,7 +76,6 @@ export default {
 
 .flex{
   display: flex;
-  flex-basis: 100px;
 }
 .underline > *{
   margin: 0 auto;
@@ -87,20 +86,29 @@ export default {
   justify-content: space-evenly;
 }
 .underline{
-  width: 100%;
+  width: 93%;
+  margin: auto;
   justify-content: space-between;
   border-bottom: grey solid;
   flex-wrap: wrap;
 }
 .logo-header{
   width: auto;
-  margin: 20px auto;
+  height: auto;
+  margin: auto;
 }
 
+div {
+  height: 100%;
+}
 /*
  * HEADER
  */
 header {
-  padding: 30px 60px;
+  position: absolute;
+  top: 0;
+  height: 150px;
+  width: 100%;
+  margin: auto;
 }
 </style>

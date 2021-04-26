@@ -205,6 +205,7 @@ export default {
 <style scoped>
 #pagination{
   height: auto;
+  margin: 40px 0;
 }
 #view {
   display: flex;
@@ -215,6 +216,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 95%;
+  margin: auto;
   align-items: center;
 }
 

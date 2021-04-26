@@ -287,7 +287,7 @@ span > *{
     flex: 1;
   }
   100%{
-    opacity: 100%;
+    opacity: 1;
   }
 }
 </style>

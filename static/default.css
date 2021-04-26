@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  min-width: 650px;
 }
 
 body{
@@ -10,6 +11,13 @@ body{
   background-color: #68A2FE;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/** Text format **/
+h1, h2, h3, a, p {
+  font-family: Arial Rounded MT, Arial Black, sans-serif;
+  color: white;
+  text-decoration: none;
 }
 
 /** General information **/
@@ -35,28 +43,7 @@ div {
   height: 100%;
 }
 
-h1, a{
-  color: white;
-  text-decoration: none;
-}
-
-/*
- * HEADER
- */
-header {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 60px;
-}
-
-
-header *{
-  font-size: 30px;
-}
-
 .logo{
-  margin: auto 0;
   height: auto;
   width: auto;
 }

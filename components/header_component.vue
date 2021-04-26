@@ -58,15 +58,18 @@ export default {
   cursor: default;
   pointer-events: none;
 }
-div > .nuxt-link-exact-active{
-  background-color: red;
-}
 
 .flexItem {
-  height: 100%;
+  display: flex;
+  align-items: center;
   width: auto;
   margin: auto 20px;
   font-size: 20px;
+  border-bottom: papayawhip solid;
+}
+
+.currentRoute{
+  border-bottom: red solid;
 }
 
 .flex{
@@ -75,6 +78,9 @@ div > .nuxt-link-exact-active{
   flex-wrap: wrap;
   align-items: stretch;
 }
+.underline > *{
+  margin: auto;
+}
 .links{
   width: auto;
   justify-content: space-evenly;
@@ -82,7 +88,7 @@ div > .nuxt-link-exact-active{
 .underline{
   width: 100%;
   justify-content: space-between;
-  border-bottom: black solid;
+  border-bottom: grey solid;
 }
 
 /*

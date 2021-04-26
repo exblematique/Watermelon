@@ -1,0 +1,53 @@
+html, body, .app {
+  height: 100%;
+  margin: 0;
+  min-width: 650px;
+}
+
+body{
+  background-image: url("/background/fond1.webp");
+  background-color: #68A2FE;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/** Text format **/
+h1, h2, h3, a, p {
+  font-family: Arial Rounded MT, Arial Black, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+/** General information **
+.app{
+  display: flex;
+  flex-direction: column;
+}**/
+
+.app div {
+  height: 100%;
+}
+
+section {
+  position: absolute;
+  bottom: 0;
+  height: calc(100% - 200px);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+div, h2, h3, p {
+  width: 100%;
+}
+
+div {
+  height: 100%;
+}
+
+.logo{
+  height: auto;
+  width: auto;
+}

@@ -25,7 +25,7 @@ export default { components: {  header_component } }
   }
   100% {
     transform: scale(1);
-    opacity: 100%;
+    opacity: 1;
   }
 }
 </style>

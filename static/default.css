@@ -20,18 +20,16 @@ h1, h2, h3, a, p {
   text-decoration: none;
 }
 
-/** General information **/
+/** General information **
 .app{
   display: flex;
   flex-direction: column;
-}
+}**/
 
 section {
   height: 75%;
   width: 95%;
   margin: auto;
-  display: inline-flex;
-  flex-direction: column;
   text-align: center;
 }
 

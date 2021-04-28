@@ -9,7 +9,7 @@
 </template>
 <style scoped>
 img {
-  height: 200%;
+  height: 15em;
   width: auto;
   margin: 0 auto;
 }

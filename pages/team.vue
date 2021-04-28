@@ -12,8 +12,10 @@ import pagination_component from "@/components/pagination_component";
 
 // Import list of member and setting background picture
 import teamMembers from '@/database/teamMembers.json';
-for (let i=0; i<teamMembers.length; i++)
-  teamMembers[i].style = "background-image: url('/team/" + teamMembers[i].img + "');";
+for (let i=0; i<teamMembers.length; i++) {
+  teamMembers[i].style = "background-image: url('/team/photo/" + teamMembers[i].img + ".webp');";
+  teamMembers[i].svg = "/team/svg/" + teamMembers[i].img + ".svg";
+}
 
 // Setup this vue
 export default {

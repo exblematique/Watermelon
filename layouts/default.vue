@@ -29,17 +29,18 @@ export default {
 </script>
 <style scoped>
 .section{
-  width: 95%;
+  width: 100%;
 }
 .content{
   min-height: calc(100% - 15rem);
   margin: 3rem auto;
+  width: 95%;
 }
 .header {
   height: 5rem;
 }
 .footer {
-  padding: 1em;
+  padding: 1em 0;
 }
 .grow-enter-active {
   animation: grow .5s;

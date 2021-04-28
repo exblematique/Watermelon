@@ -1,11 +1,18 @@
 <template>
   <header>
     <div class="flex underline">
-      <img
-        class="logo-header"
-        src="/logo.webp"
-        alt="Logo de l'association Watermelon"
-      >
+      <div class="logo-header">
+        <img
+          class="logo-header"
+          src="/assets/logo.webp"
+          alt="Logo de l'association Watermelon"
+        >
+        <img
+          class="logo-header logo-txt"
+          src="/assets/txt-watermelon.svg"
+          alt="Watermelon"
+        >
+      </div>
       <div class="flex links">
         <div
           v-for="(link, index) in links"
@@ -66,11 +73,11 @@ export default {
   width: auto;
   margin: 0 20px;
   font-size: 20px;
-  border-bottom: papayawhip solid;
+  border-bottom: rgba(255,255,255,0.5) solid;
 }
 
 .currentRoute{
-  border-bottom: red solid;
+  border-bottom: rgba(255,0,0,0.8) solid;
 }
 
 .flex{
@@ -87,11 +94,22 @@ export default {
   height: 100%;
   width: 93%;
   margin: auto;
-  border-bottom: grey solid;
+  border-bottom: rgba(128,128,128,0.5) solid;
 }
 .logo-header{
+  display: flex;
+  justify-content: center;
   height: 3rem;
   width: auto;
   margin: auto;
+}
+.logo-txt{
+  padding-left: 0.5rem;
+  height: 2rem;
+}
+@media (max-width: 47rem){
+  .logo-txt {
+    display: none;
+  }
 }
 </style>

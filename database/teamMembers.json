@@ -2,42 +2,38 @@
   {
     "name": "Bouquet Xavier",
     "roles": ["Président de l'association", "Monteur"],
-    "img": "xavier.webp"
+    "img": "xavier"
   },{
     "name": "Signaire Caroline",
     "roles": ["Trésorière", "Monteuse"],
-    "img": "caroline.webp"
+    "img": "caroline"
   },{
     "name": "Canevet Océane",
     "roles": ["Responsable com","Monteuse"],
-    "img": "oceane.webp"
+    "img": "oceane"
   },{
     "name": "Bouché Alexandre",
     "roles": ["Cadreur"],
-    "img": "alexandre.webp"
+    "img": "alexandre"
   },{
     "name": "Pognant-Gros Johan",
     "roles": ["Cadreur"],
-    "img": "johan.webp"
+    "img": "johan"
   },{
     "name": "Jouslin Aurélie",
     "roles": ["Cadreuse"],
-    "img": "aurelie.webp"
+    "img": "aurelie"
   },{
     "name": "Gazeau Aigline",
     "roles": ["Ingenieure du son"],
-    "img": "aigline.webp"
+    "img": "aigline"
   },{
     "name": "Berling Morgane",
     "roles": ["Actrice"],
-    "img": "morgane.webp"
+    "img": "morgane"
   },{
     "name": "Duguey Claire",
     "roles": ["Animatrice 3D"],
-    "img": "claire.webp"
-  },{
-    "name": "Megier Gaspard",
-    "roles": ["Compositeur"],
-    "img": "gaspard.webp"
+    "img": "claire"
   }
 ]

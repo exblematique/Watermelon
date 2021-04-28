@@ -1,8 +1,13 @@
 <template>
   <div
     :style="data.style"
+    class="member"
   >
-    <h2>{{ data.name }}</h2>
+    <img
+      :src="data.svg"
+      :alt="data.img"
+      class="svg"
+    >
     <h3
       v-for="(role, index) in data.roles"
       :key="index"
@@ -24,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-div {
+.member {
   height: 500px;
   width: 300px;
   display: flex;
@@ -33,11 +38,13 @@ div {
   background-repeat: no-repeat;
   background-size: cover;
 }
-h2 {
-  margin-top: 375px;
+.svg{
+  height: 3rem;
+  margin-top: 350px;
 }
 
 h3{
-  margin: 5px;
+  padding-top: 1rem;
+  margin: 0;
 }
 </style>

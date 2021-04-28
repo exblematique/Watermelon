@@ -25,6 +25,7 @@
     "eslint": "^7.24.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-vue": "^7.9.0",
-    "eslint-webpack-plugin": "^2.5.3"
+    "eslint-webpack-plugin": "^2.5.3",
+    "vue-svg-loader": "^0.16.0"
   }
 }

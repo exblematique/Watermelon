@@ -107,4 +107,9 @@ export default {
   padding-left: 0.5rem;
   height: 2rem;
 }
+@media (max-width: 47rem){
+  .logo-txt {
+    display: none;
+  }
+}
 </style>

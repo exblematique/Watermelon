@@ -22,7 +22,7 @@
 }
 
 img {
-  height: 6rem;
+  height: 7rem;
 
 }
 h1 {

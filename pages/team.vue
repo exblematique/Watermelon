@@ -1,12 +1,10 @@
 <template>
-  <section>
-    <h1>Ceci est l'équipe</h1>
-    <pagination_component
-      :list-of-elements="$options.static.items"
-      :visible-items-per-page="$options.static.visibleItemsPerPage"
-      :component-type="$options.static.componentType"
-    />
-  </section>
+  <pagination_component
+    :title="'L\'équipe'"
+    :list-of-elements="$options.static.items"
+    :visible-items-per-page="$options.static.visibleItemsPerPage"
+    :component-type="$options.static.componentType"
+  />
 </template>
 
 <script>// Import custom component to display pagination

@@ -1,11 +1,9 @@
 <template>
-  <section>
-    <h1>Voici les compétences que nous avons :</h1>
-    <pagination_component
-      :list-of-elements="$options.static.items"
-      :visible-items-per-page="$options.static.visibleItemsPerPage"
-    />
-  </section>
+  <pagination_component
+    :title="'Nos compétences'"
+    :list-of-elements="$options.static.items"
+    :visible-items-per-page="$options.static.visibleItemsPerPage"
+  />
 </template>
 
 <script>
@@ -20,7 +18,7 @@ export default {
   name: "Abilities",
   static: {
     items: database,
-    visibleItemsPerPage: 1
+    visibleItemsPerPage: 3
   },
   components: {
     pagination_component

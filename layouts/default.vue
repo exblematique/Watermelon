@@ -1,20 +1,46 @@
 <template>
   <div class="app">
-    <header_component />
+    <header_component
+      class="section header"
+    />
     <transition
       name="grow"
       mode="in-out"
     >
-      <nuxt />
+      <nuxt
+        class="section content"
+      />
     </transition>
+    <footer_component
+      class="section footer"
+    />
   </div>
 </template>
 
 <script>
 import header_component from "@/components/header_component";
-export default { components: {  header_component } }
+import footer_component from "@/components/footer_component";
+export default {
+  components: {
+    header_component,
+    footer_component
+  }
+}
 </script>
 <style scoped>
+.section{
+  width: 95%;
+}
+.content{
+  min-height: calc(100% - 15rem);
+  margin: 3rem auto;
+}
+.header {
+  height: 5rem;
+}
+.footer {
+  padding: 1em;
+}
 .grow-enter-active {
   animation: grow .5s;
 }

@@ -1,13 +1,11 @@
 <template>
   <header>
     <div class="flex underline">
-      <div class="logo-header">
-        <img
-          class="logo"
-          src="/logo.webp"
-          alt="Logo de l'association Watermelon"
-        >
-      </div>
+      <img
+        class="logo-header"
+        src="/logo.webp"
+        alt="Logo de l'association Watermelon"
+      >
       <div class="flex links">
         <div
           v-for="(link, index) in links"
@@ -64,6 +62,7 @@ export default {
 .flexItem {
   display: flex;
   align-items: center;
+  height: 100%;
   width: auto;
   margin: 0 20px;
   font-size: 20px;
@@ -81,34 +80,18 @@ export default {
   margin: 0 auto;
 }
 .links{
-  height: auto;
+  height: 100%;
   width: auto;
-  justify-content: space-evenly;
 }
 .underline{
+  height: 100%;
   width: 93%;
   margin: auto;
-  justify-content: space-between;
   border-bottom: grey solid;
-  flex-wrap: wrap;
 }
 .logo-header{
+  height: 3rem;
   width: auto;
-  height: auto;
-  margin: auto;
-}
-
-div {
-  height: 100%;
-}
-/*
- * HEADER
- */
-header {
-  position: absolute;
-  top: 0;
-  height: 150px;
-  width: 100%;
   margin: auto;
 }
 </style>

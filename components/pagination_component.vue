@@ -1,40 +1,21 @@
 <template>
-  <div id="view">
-    <div id="elements">
-      <Button
-        :disabled="isPreviousButtonDisabled"
-        @click="previousPage"
-      >
-        &#60;
-      </Button>
-      <transition-group
-        name="opacity"
-        tag="span"
-      >
-        <componentsToDisplay
-          v-for="element in elementsToDisplay"
-          :key="element.index"
-          :data="element"
-          :type="componentType"
-          :visible-time="(element.index + 1 - (currentPage - 1) * currentVisibleItemsPerPage) * timeBetweenEachAnimation"
-        />
-      </transition-group>
-      <button
-        :disabled="isNextButtonDisabled"
-        @click="nextPage"
-      >
-        &#62;
-      </button>
-    </div>
-    <div id="pagination">
-      <button
-        v-for="i in pageCount"
-        :key="i"
-        :disabled="i === currentPage"
-        @click="pageChangeHandle(i)"
+  <section>
+    <h1>{{ title }}</h1>
+    <transition-group
+      name="opacity"
+      tag="div"
+      class="elements"
+    >
+      <componentsToDisplay
+        v-for="element in elementsToDisplay"
+        :key="element.index"
+        :data="element"
+        :type="componentType"
+        :visible-time="element.index * timeBetweenEachAnimation"
+        class="item"
       />
-    </div>
-  </div>
+    </transition-group>
+  </section>
 </template>
 
 <script>
@@ -52,6 +33,10 @@ export default {
   mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin],
   layout: 'pagination',
   props: {
+    title: {
+      type: String,
+      default: ""
+    },
     listOfElements: {
       type: Array,
       default: null
@@ -71,207 +56,49 @@ export default {
   },
   data() {
     return {
-      listOfElementsWithIndex: this.createIndex(this.listOfElements),
-      elementsToDisplay : [],
-      currentPage: 1,
-      // Number of element to display according to width
-      currentVisibleItemsPerPage: 1,
-      // Number of pages available to display
-      pageCount: 1,
-      //To manage animation successive
-      elementsLoad: 0,
+      elementsToDisplay : this.createIndex(this.listOfElements),
       // Timer to load next item
       nextLoad: 0
     }
   },
-  // Create functions to disable buttons
-  computed:{
-    isPreviousButtonDisabled() {
-      return this.currentPage === 1
-    },
-    isNextButtonDisabled() {
-      return this.currentPage === this.pageCount
-    }
-  },
-
-  // Call this function when page is call for the first time
-  async mounted(){
-    this.vssEvent = this.test;
-    this.updateSizeAndRender();
-
-    //TODO TEST
-    console.log(this.$vssEvent)
-  },
-
-  // Setup event when this component is created
-  created() {
-    //TODO TEST
-    console.log(this.$vssEvent)
-    //this.$vssEvent.on('resize', this.updateSizeAndRender);
-  },
 
   // Methods available
   methods: {
-    //TODO TEST
-    test(){
-      console.log("TESSSSSSSSSSST");
-    },
-    /*vssEvent($vssEvent){
-      this.updateSize();
-      this.renderVue();
-    },*/
     createIndex(array){
       let output = [...array];
       for (let i=0; i<output.length; i++)
         output[i]['index'] = i;
       return output;
-    },
-    // Update size of program
-    updateSizeAndRender(){
-      // Calculate quantity of elements in page
-      // According to some tests that I made
-      // If negative or null, only 1 element can be display
-      let maxItemsWithSize = Math.ceil((this.$vssWidth - 1100)/300) + 1;
-      if (maxItemsWithSize < 1)
-        maxItemsWithSize = 1;
-
-      //Then update values
-      this.currentVisibleItemsPerPage = Math.min(maxItemsWithSize, this.visibleItemsPerPage);
-      this.pageCount = Math.ceil(this.listOfElements.length / this.currentVisibleItemsPerPage);
-
-      //Then render vue
-      this.renderVue()
-    },
-    // To render a vue
-    renderVue(){
-      // Retrieve information from database
-      // And send to display
-      this.elementsToDisplay = [];
-      const startIndex = (this.currentPage - 1) * this.currentVisibleItemsPerPage;
-      for (let i=0; i<this.currentVisibleItemsPerPage; i++){
-        //Check if the element exists in array
-        if (startIndex+i < this.listOfElementsWithIndex.length)
-          this.elementsToDisplay.push(
-              this.listOfElementsWithIndex[startIndex + i]
-          );
-      }
-    },
-    // TODO TEMP Return time when a element must be displayed
-    // According to variable "nextLoad"
-    displayElementTime(index){
-      const currentDate = new Date();
-      return currentDate.getTime() + index * this.timeBetweenEachAnimation;
-    },
-    /* TODO REMOVE
-    // Return true when a element must be displayed
-    // According to variable "nextLoad"
-    async displayElementTime(index){
-      if (index === this.elementsLoad){
-        const currentDate = new Date();
-        if (this.nextLoad < currentDate.getTime()){
-          this.nextLoad = currentDate.getTime() + this.timeBetweenEachAnimation;
-          this.elementsLoad++;
-        }
-      }
-      //TODO remove
-      console.log(index + ": " + (this.elementsLoad > index ? "true" : "false"));
-      return this.elementsLoad > index;
-    },*/
-
-    // To change page
-    pageChangeHandle (value){
-      switch (value) {
-        case 'next':
-          this.currentPage++;
-          break;
-        case 'previous':
-          this.currentPage--;
-          break;
-        default:
-          this.currentPage = parseInt(value);
-      }
-      this.renderVue();
-    },
-    nextPage() {
-      this.pageChangeHandle('next');
-    },
-    previousPage() {
-      this.pageChangeHandle('previous')
     }
   }
 }
 </script>
 
 <style scoped>
-#pagination{
-  height: auto;
-  margin: 40px 0;
+@media (min-width: 1200px) {
+  .item {
+    max-width: calc(100% / 3);
+  }
 }
-#view {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+h1 {
+  padding: 2rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
-#elements {
+.elements {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  width: 95%;
   margin: auto;
   align-items: center;
 }
-
-button {
-  /* To prevent changing button size */
-  flex-shrink: 0;
-  border-radius: 50%;
-  background-color: rgba(169, 169, 169, 0.4);
-  cursor: pointer;
+.item{
+  background-color: rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin: 2em auto auto;
 }
-
-button:disabled{
-  cursor: default;
-}
-
-#elements button{
-  height: 100px;
-  width: 100px;
-  border: 5px solid white;
-  color: white;
-  font-weight: bold;
-  font-size: x-large;
-}
-
-#elements button:disabled {
-  color: darkgrey;
-  border-color: darkgrey;
-}
-
-#pagination button {
-  height: 20px;
-  width: 20px;
-  margin: 0 10px;
-  border: 2px solid white;
-}
-
-#pagination button:disabled {
-  background: white;
-}
-
 /* ANIMATION */
-span{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-span > *{
-  flex: 1;
-}
-
 .opacity-enter-active {
   animation: opacity .5s;
 }

@@ -23,7 +23,6 @@
 
 img {
   height: 7rem;
-
 }
 h1 {
   font-size: 2rem;

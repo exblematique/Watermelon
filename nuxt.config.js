@@ -12,7 +12,7 @@ export default {
 
   // Enable to create static files
   // Options are 'server' or 'static'
-  target: 'server',
+  target: 'static',
 
   // Headers of the page
   head: {

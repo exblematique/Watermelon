@@ -1,0 +1,40 @@
+html, body, .app, #__nuxt, #__layout {
+  height: 100%;
+  margin: 0;
+  min-width: 40rem;
+}
+
+body{
+  background-image: url("/background/fond1.webp");
+  background-color: #68A2FE;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Import font */
+@font-face {
+  font-family: 'Eagle Book';
+  src:
+    local('Eagle Book'),
+    local('Eagle-Book'),
+    url('/font/eagle-book.ttf')
+    format('truetype');
+}
+
+/** Text format **/
+header a, h1, h2 {
+  font-family: "Eagle Book", "Arial Rounded MT", "Arial Black", sans-serif;
+}
+
+* {
+  font-family: "Arial Rounded MT", "Arial Black", sans-serif;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+/** General information **/
+h2, h3, p, section {
+  width: 100%;
+}

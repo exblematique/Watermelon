@@ -86,17 +86,16 @@ h1 {
   text-transform: uppercase;
 }
 .elements {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
   margin: auto;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 .item{
   background-color: rgba(0,0,0,0.1);
   padding: 2rem;
-  margin: 2em auto auto;
+  margin: 2em auto 0;
 }
 /* ANIMATION */
 .opacity-enter-active {
@@ -108,10 +107,6 @@ h1 {
 @keyframes opacity {
   0% {
     opacity: 0;
-    flex: 0;
-  }
-  50%{
-    flex: 1;
   }
   100%{
     opacity: 1;

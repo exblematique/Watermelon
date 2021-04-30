@@ -1,9 +1,18 @@
 <template>
   <section>
     <div class="logo-home">
+      <div
+        class="logo-img"
+      >
+        <img
+          src="/assets/logo.webp"
+          alt="Logo de l'association Watermelon"
+        >
+      </div>
       <img
         src="/assets/txt-watermelon.svg"
-        alt="Logo de l'association Watermelon"
+        alt="Watermelon"
+        class="logo-txt"
       >
     </div>
     <h1>Association de réalisation et production audiovisuelle</h1>
@@ -11,19 +20,34 @@
 </template>
 <style scoped>
 .logo-home {
-  background-image: url('/assets/logo.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
+  position: relative;
   height: 15rem;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-img {
-  height: 7rem;
+.logo-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  /* Add the blur effect */
+  filter: blur(0.25rem);
+  -webkit-filter: blur(0.4rem);
 }
+
+.logo-img > img{
+  height: 100%;
+}
+
+.logo-txt {
+  position: relative;
+  height: 7rem;
+  filter: drop-shadow(2px 2px 4px #96b70e);
+}
+
 h1 {
   font-size: 2rem;
 }

@@ -60,42 +60,20 @@ export default {
 </script>
 
 <style scoped>
-/* Particular CSS when the link forward to the current page */
-.nuxt-link-exact-active{
-  cursor: default;
-  pointer-events: none;
-}
-
-.flexItem {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: auto;
-  margin: 0 20px;
-  font-size: 20px;
-  border-bottom: rgba(255,255,255,0.5) solid;
-}
-
-.currentRoute{
-  border-bottom: rgba(255,0,0,0.8) solid;
-}
-
 .flex{
-  display: flex;
-}
+   display: flex;
+ }
+/********** DISPLAY LINE IN HEADER **********/
 .underline > *{
   margin: 0 auto;
-}
-.links{
-  height: 100%;
-  width: auto;
 }
 .underline{
   height: 100%;
   width: 93%;
   margin: auto;
-  border-bottom: rgba(128,128,128,0.5) solid;
+  border-bottom: rgba(254, 249, 227, 1) solid;
 }
+/********** STYLE FOR LOGO **********/
 .logo-header{
   display: flex;
   justify-content: center;
@@ -106,7 +84,39 @@ export default {
 .logo-txt{
   padding-left: 0.5rem;
   height: 2rem;
+  -webkit-filter: invert(47%) sepia(20%) saturate(4891%) hue-rotate(326deg) brightness(102%) contrast(99%) drop-shadow(0 0 1px #96b70e);
+  filter: invert(47%) sepia(20%) saturate(4891%) hue-rotate(326deg) brightness(102%) contrast(99%) drop-shadow(0 0 1px #96b70e);
 }
+/********** STYLE FOR LINKS **********/
+.flexItem *{
+  color: white;
+  text-shadow: 0 0 0.5rem #96b70e;
+}
+.flexItem {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  margin: 0 20px;
+  font-size: 20px;
+  border-bottom: rgba(150, 183, 14 ,0.5) solid;
+}
+.currentRoute{
+  border-bottom: rgba(255,89,91,0.5) solid;
+}
+.currentRoute * {
+  text-shadow: 0 0 0.5rem #ff595b;
+}
+.links{
+  height: 100%;
+  width: auto;
+}
+/* Particular CSS when the link forward to the current page */
+.nuxt-link-exact-active{
+  cursor: default;
+  pointer-events: none;
+}
+
 @media (max-width: 47rem){
   .logo-txt {
     display: none;

@@ -1,5 +1,8 @@
 <template>
-  <div class="app">
+  <div
+    class="app"
+    :class="{index: isIndex()}"
+  >
     <header_component
       class="section header"
     />
@@ -24,10 +27,35 @@ export default {
   components: {
     header_component,
     footer_component
+  },
+  methods:{
+    isIndex(){
+      return this.$route.name === "index"
+    }
   }
 }
 </script>
 <style scoped>
+.app{
+  background-image:
+      linear-gradient(
+          180deg,
+          #ffe4eb,
+          rgba(104, 162, 254, 0.5)
+      );
+  background-color: #96b70e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.index{
+  background-image:
+    linear-gradient(
+        180deg,
+        #ffe4eb,
+        rgba(104, 162, 254, 0.5)
+    ), url('/background/fond1.webp');
+}
 .section{
   width: 100%;
 }

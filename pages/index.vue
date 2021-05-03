@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  beforeCreate() {
+  beforeMount() {
     document.body.className = "index";
   },
   beforeDestroy() {

@@ -1,5 +1,7 @@
 <template>
-  <div class="app">
+  <div
+    class="app"
+  >
     <header_component
       class="section header"
     />
@@ -27,7 +29,32 @@ export default {
   }
 }
 </script>
+<style>
+body {
+  background-image:
+      linear-gradient(
+          180deg,
+          rgba(255, 228, 235, 0.95) 4rem,
+          rgba(212, 216, 255, 0.85) 75%,
+          rgba(186, 200, 149, 0.9) 100%
+      ), url('/background/watermelon.webp');
+  background-color: #96b70e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.index{
+  background-image:
+      linear-gradient(
+          180deg,
+          rgba(255, 228, 235, 1),
+          rgba(255, 228, 235, 0.5) 75%,
+          rgba(255,255,255,0.2)
+      ), url('/background/fond1.webp');
+}
+</style>
 <style scoped>
+
 .section{
   width: 100%;
 }

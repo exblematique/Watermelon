@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h1>{{ title }}</h1>
+    <div class="title">
+      <h1>{{ title }}</h1>
+    </div>
     <transition-group
       name="opacity"
       tag="div"
@@ -19,9 +21,6 @@
 </template>
 
 <script>
-// Import library to manage randing when screen change size
-import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
-
 // Import custom component to display only few elements
 import componentsToDisplay from "@/components/pagination_item_component";
 
@@ -30,7 +29,6 @@ export default {
   components: {
     componentsToDisplay
   },
-  mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin],
   layout: 'pagination',
   props: {
     title: {
@@ -75,27 +73,35 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 1200px) {
-  .item {
-    max-width: calc(100% / 3);
-  }
+.title {
+  max-width: 90rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  background-color: rgba(255, 89, 91 ,0.2);
+  border-radius: 1rem;
 }
-h1 {
-  padding: 2rem 0;
+.title * {
+  margin: auto;
   font-size: 2rem;
-  text-transform: uppercase;
 }
 .elements {
+  max-width: 90rem;
   margin: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  justify-content: space-between;
 }
 .item{
-  background-color: rgba(0,0,0,0.1);
-  padding: 2rem;
-  margin: 2em auto 0;
+  height: 100%;
+  width: fit-content;
+  min-height: 20rem;
+  max-width: 25rem;
 }
 /* ANIMATION */
 .opacity-enter-active {

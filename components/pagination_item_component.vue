@@ -1,5 +1,5 @@
 <template>
-  <span
+  <div
     v-if="visible"
   >
     <component
@@ -7,7 +7,7 @@
       v-if="component"
       :data="data"
     />
-  </span>
+  </div>
 </template>
 
 <script>

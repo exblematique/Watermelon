@@ -2,6 +2,8 @@
   {
     "name": "Bouquet Xavier",
     "roles": ["Président de l'association", "Monteur"],
+    "description" : "Ceci est un loooooooooooong test de description. Voilà qui je suis : un présdent !",
+    "rs": "@Xavier",
     "img": "xavier"
   },{
     "name": "Signaire Caroline",

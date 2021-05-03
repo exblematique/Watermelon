@@ -1,19 +1,30 @@
 <template>
-  <div
-    :style="data.style"
-    class="member"
-  >
-    <img
-      :src="data.svg"
-      :alt="data.img"
-      class="svg"
-    >
-    <h3
-      v-for="(role, index) in data.roles"
-      :key="index"
-    >
-      {{ role }}
-    </h3>
+  <div class="member">
+    <div class="member-inner">
+      <div
+        class="member-front"
+        :style="data.style"
+      >
+        <img
+          :src="data.svg"
+          :alt="data.img"
+          class="svg"
+        >
+        <h3
+          v-for="(role, index) in data.roles"
+          :key="index"
+        >
+          {{ role }}
+        </h3>
+      </div>
+      <div
+        class="member-back"
+      >
+        <h2>{{ data.name }}</h2>
+        <p>{{ data.description }}</p>
+        <h3>{{ data.rs }}</h3>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -29,22 +40,50 @@ export default {
 </script>
 
 <style scoped>
-.member {
-  height: 500px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .svg{
   height: 3rem;
-  margin-top: 350px;
+  padding-top: 9rem;
 }
 
 h3{
   padding-top: 1rem;
   margin: 0;
+}
+.member {
+  height: 18rem;
+  width: 18rem;
+  perspective: 1000px;
+  background-color: transparent;
+}
+/** CSS to flap card **/
+.member-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.member:hover .member-inner, .member-back{
+  transform: rotateY(180deg);
+}
+.member-front, .member-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.member-front{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.member-back{
+  background-color: rgba(255, 89, 91 ,0.2);
+}
+p {
+  margin: auto;
+  width: 90%;
 }
 </style>

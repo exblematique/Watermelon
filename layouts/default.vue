@@ -30,7 +30,7 @@ export default {
   },
   methods:{
     isIndex(){
-      return this.$route.name === "index"
+      return true;//TODO CHECK this.$route.name === "index"
     }
   }
 }

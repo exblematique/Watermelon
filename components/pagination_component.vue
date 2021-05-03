@@ -19,9 +19,6 @@
 </template>
 
 <script>
-// Import library to manage randing when screen change size
-import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
-
 // Import custom component to display only few elements
 import componentsToDisplay from "@/components/pagination_item_component";
 
@@ -30,7 +27,6 @@ export default {
   components: {
     componentsToDisplay
   },
-  mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin],
   layout: 'pagination',
   props: {
     title: {
@@ -75,11 +71,6 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 1200px) {
-  .item {
-    max-width: calc(100% / 3);
-  }
-}
 h1 {
   padding: 2rem 0;
   font-size: 2rem;
@@ -87,15 +78,16 @@ h1 {
 }
 .elements {
   margin: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  place-items: center;
 }
 .item{
-  background-color: rgba(0,0,0,0.1);
-  padding: 2rem;
-  margin: 2em auto 0;
+  height: 100%;
+  min-height: 20rem;
+  max-width: 25rem;
 }
 /* ANIMATION */
 .opacity-enter-active {

@@ -13,14 +13,22 @@ html, body, .app, #__nuxt, #__layout {
     url('/font/eagle-book.ttf')
     format('truetype');
 }
-
-/** Text format **/
-header a, h1, h2 {
-  font-family: "Eagle Book", "Arial Rounded MT", "Arial Black", sans-serif;
+@font-face {
+font-family: 'Roboto';
+src:
+        local('Roboto Regular'),
+        local('Roboto-Regular'),
+        local('Roboto'),
+        url('/font/Roboto-Regular.ttf')
+        format('truetype');
 }
-
+/** Text format **/
+h1, h2, header a {
+    font-family: 'Eagle Book', 'Roboto', sans-serif;
+    text-shadow: 0 0 0.5rem #ff595b;
+}
 * {
-  font-family: "Arial Rounded MT", "Arial Black", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   text-decoration: none;
   text-align: center;

@@ -35,7 +35,7 @@
 
   /* Add the blur effect */
   filter: blur(0.25rem);
-  -webkit-filter: blur(0.4rem);
+  -webkit-filter: blur(0.25rem);
 }
 
 .logo-img > img{

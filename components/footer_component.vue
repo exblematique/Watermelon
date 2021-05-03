@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <span>© Watermelon | 2016 - {{ year }}</span>
+    <span>© Watermelon | 2020 - {{ year }}</span>
   </footer>
 </template>
 

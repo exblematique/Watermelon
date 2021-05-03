@@ -4,34 +4,35 @@ html, body, .app, #__nuxt, #__layout {
   min-width: 40rem;
 }
 
-body{
-  background-image: url("/background/fond1.webp");
-  background-color: #68A2FE;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 /* Import font */
 @font-face {
   font-family: 'Eagle Book';
   src:
     local('Eagle Book'),
     local('Eagle-Book'),
-    url('/font/eagle-book.ttf')
+    url('/font/Pangolin-Regular.ttf')
     format('truetype');
 }
-
-/** Text format **/
-header a, h1, h2 {
-  font-family: "Eagle Book", "Arial Rounded MT", "Arial Black", sans-serif;
+@font-face {
+font-family: 'Roboto';
+src:
+        local('Roboto Regular'),
+        local('Roboto-Regular'),
+        local('Roboto'),
+        url('/font/Roboto-Regular.ttf')
+        format('truetype');
 }
-
+/** Text format **/
+h1, h2, header a {
+    font-family: 'Eagle Book', 'Roboto', sans-serif;
+    text-shadow: 0 0 0.5rem #ff595b;
+    color: white;
+}
 * {
-  font-family: "Arial Rounded MT", "Arial Black", sans-serif;
-  color: white;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   text-align: center;
+  color: #ff595b;
 }
 
 /** General information **/

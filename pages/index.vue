@@ -1,27 +1,29 @@
 <template>
-  <section>
-    <div class="logo-home">
-      <div
-        class="logo-img"
-      >
+  <client-only>
+    <section>
+      <div class="logo-home">
+        <div
+          class="logo-img"
+        >
+          <img
+            src="/assets/logo.webp"
+            alt="Logo de l'association Watermelon"
+          >
+        </div>
         <img
-          src="/assets/logo.webp"
-          alt="Logo de l'association Watermelon"
+          src="/assets/txt-watermelon.svg"
+          alt="Watermelon"
+          class="logo-txt"
         >
       </div>
-      <img
-        src="/assets/txt-watermelon.svg"
-        alt="Watermelon"
-        class="logo-txt"
-      >
-    </div>
-    <h1>Association de réalisation et production audiovisuelle</h1>
-  </section>
+      <h1>Association de réalisation et production audiovisuelle</h1>
+    </section>
+  </client-only>
 </template>
 <script>
 export default {
-  beforeCreate() {
-    document.body.className = "index";
+  beforeMount() {
+      document.body.className = "index";
   },
   beforeDestroy() {
     document.body.className = "";

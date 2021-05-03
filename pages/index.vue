@@ -18,6 +18,16 @@
     <h1>Association de réalisation et production audiovisuelle</h1>
   </section>
 </template>
+<script>
+export default {
+  beforeCreate() {
+    document.body.className = "index";
+  },
+  beforeDestroy() {
+    document.body.className = "";
+  }
+}
+</script>
 <style scoped>
 .logo-home {
   position: relative;

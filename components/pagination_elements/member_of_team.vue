@@ -79,6 +79,10 @@ h3{
   background-size: cover;
 }
 
+.member-front * {
+  color: white;
+}
+
 .member-back{
   background-color: rgba(255, 89, 91 ,0.2);
 }

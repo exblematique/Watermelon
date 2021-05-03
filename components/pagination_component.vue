@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h1>{{ title }}</h1>
+    <div class="title">
+      <h1>{{ title }}</h1>
+    </div>
     <transition-group
       name="opacity"
       tag="div"
@@ -71,22 +73,33 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  padding: 2rem 0;
+.title {
+  max-width: 90rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  background-color: rgba(255, 89, 91 ,0.2);
+  border-radius: 1rem;
+}
+.title * {
+  margin: auto;
   font-size: 2rem;
-  text-transform: uppercase;
 }
 .elements {
   max-width: 90rem;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   row-gap: 2rem;
   column-gap: 2rem;
-  place-items: center;
+  justify-content: space-between;
 }
 .item{
   height: 100%;
+  width: fit-content;
   min-height: 20rem;
   max-width: 25rem;
 }

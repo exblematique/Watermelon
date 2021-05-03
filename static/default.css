@@ -10,7 +10,7 @@ html, body, .app, #__nuxt, #__layout {
   src:
     local('Eagle Book'),
     local('Eagle-Book'),
-    url('/font/eagle-book.ttf')
+    url('/font/Pangolin-Regular.ttf')
     format('truetype');
 }
 @font-face {
@@ -26,12 +26,13 @@ src:
 h1, h2, header a {
     font-family: 'Eagle Book', 'Roboto', sans-serif;
     text-shadow: 0 0 0.5rem #ff595b;
+    color: white;
 }
 * {
   font-family: "Roboto", sans-serif;
-  color: white;
   text-decoration: none;
   text-align: center;
+  color: #ff595b;
 }
 
 /** General information **/

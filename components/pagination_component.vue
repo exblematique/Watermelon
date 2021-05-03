@@ -77,6 +77,7 @@ h1 {
   text-transform: uppercase;
 }
 .elements {
+  max-width: 90rem;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

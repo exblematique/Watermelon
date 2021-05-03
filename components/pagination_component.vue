@@ -100,7 +100,6 @@ export default {
 .item{
   height: 100%;
   width: fit-content;
-  min-height: 20rem;
   max-width: 25rem;
 }
 /* ANIMATION */
@@ -116,6 +115,24 @@ export default {
   }
   100%{
     opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .elements {
+    grid-template-columns: repeat(2, auto);
+  }
+  .item:last-child,
+  .item:nth-last-child(2):nth-child(odd){
+    max-width: none;
+    grid-column-end: span 2;
+  }
+}
+
+@media (max-width: 670px) {
+  .elements {
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
   }
 }
 </style>

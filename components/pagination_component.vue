@@ -1,7 +1,10 @@
 <template>
   <section>
     <div class="title">
-      <h1>{{ title }}</h1>
+      <img
+        :src="'/title_svg/'+name+'.svg'"
+        :alt="title"
+      />
     </div>
     <transition-group
       name="opacity"
@@ -31,6 +34,11 @@ export default {
   },
   layout: 'pagination',
   props: {
+    name:{
+      type: String,
+      default: ""
+    },
+    //TODO Check if title is used
     title: {
       type: String,
       default: ""
@@ -73,6 +81,12 @@ export default {
 </script>
 
 <style scoped>
+.title > img {
+  height: 100%;
+  width: auto;
+  filter: drop-shadow(0 0 2px #ff595b);
+}
+
 .title {
   max-width: 90rem;
   height: 4rem;

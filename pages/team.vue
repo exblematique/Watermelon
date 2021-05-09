@@ -1,6 +1,7 @@
 <template>
   <pagination_component
     :title="'L\'équipe'"
+    :name="'team'"
     :list-of-elements="$options.static.items"
     :visible-items-per-page="$options.static.visibleItemsPerPage"
     :component-type="$options.static.componentType"

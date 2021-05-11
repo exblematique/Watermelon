@@ -1,5 +1,7 @@
 <template>
-  <div class="member"
+  <div
+    v-show="ready"
+    class="member"
   >
     <div class="member-inner">
       <div
@@ -10,6 +12,7 @@
           :src="data.svg"
           :alt="data.img"
           class="svg"
+          @load="loaded"
         >
         <h3
           v-for="(role, index) in data.roles"
@@ -35,6 +38,16 @@ export default {
     data: {
       type: Object,
       default: null
+    }
+  },
+  data(){
+    return {
+      ready: false
+    }
+  },
+  methods:{
+    loaded(){
+      this.ready = true;
     }
   }
 }

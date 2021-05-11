@@ -18,6 +18,7 @@
         :type="componentType"
         :visible-time="element.index * timeBetweenEachAnimation"
         class="item"
+        :class="{lastOddItem: element.index === $data.lastOddItem}"
       />
     </transition-group>
   </section>
@@ -60,12 +61,18 @@ export default {
       default: 500
     }
   },
+
   data() {
     return {
       elementsToDisplay : this.createIndex(this.listOfElements),
       // Timer to load next item
-      nextLoad: 0
+      nextLoad: 0,
+      lastOddItem: -1
     }
+  },
+  beforeMount() {
+    if (this.elementsToDisplay.length % 2 === 1)
+      this.lastOddItem = this.elementsToDisplay.length - 1;
   },
 
   // Methods available
@@ -106,7 +113,7 @@ export default {
   max-width: 90rem;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 2rem;
   column-gap: 2rem;
   justify-content: space-between;
@@ -114,7 +121,6 @@ export default {
 .item{
   height: 100%;
   width: fit-content;
-  max-width: 25rem;
 }
 /* ANIMATION */
 .opacity-enter-active {
@@ -134,20 +140,16 @@ export default {
 
 @media (max-width: 1000px) {
   .elements {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 1fr;
   }
-  /* TODO FIX THIS (or remove)
-  .item:last-child,
-  .item:nth-last-child(2):nth-child(odd){
-    max-width: none;
+  .lastOddItem{
     grid-column-end: span 2;
   }
-   */
 }
 
 @media (max-width: 670px) {
   .elements {
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: 1fr;
     justify-content: center;
   }
 }

@@ -13,26 +13,18 @@ html, body, .app, #__nuxt, #__layout {
     url('/font/eagle-book.ttf')
     format('truetype');
 }
-@font-face {
-font-family: 'Roboto';
-src:
-        local('Roboto Regular'),
-        local('Roboto-Regular'),
-        local('Roboto'),
-        url('/font/Roboto-Regular.ttf')
-        format('truetype');
-}
 /** Text format **/
 h1, h2, header a {
-    font-family: 'Eagle Book', 'Roboto', sans-serif;
+    font-family: 'Eagle Book', 'Arial', sans-serif;
     text-shadow: 0 0 0.5rem #ff595b;
     color: white;
+    font-weight: normal;
 }
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Arial', sans-serif;
   text-decoration: none;
   text-align: center;
-  color: #ff595b;
+  color: white;
 }
 
 /** General information **/

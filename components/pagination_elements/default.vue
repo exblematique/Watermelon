@@ -20,14 +20,15 @@ div{
   min-height: 15rem;
   height: 90%;
   padding: 1rem;
-  margin: 1rem;
-  border-radius: 10%;
-  background-color: rgba(255, 89, 91 ,0.2);
+  border-radius: 2rem;
+  background-color: rgba(255, 89, 91 ,0.4);
 
 
 }
 p {
   margin: auto;
   width: 90%;
+  text-align: justify;
+  filter: drop-shadow(0 0 1px #ff595b);
 }
 </style>

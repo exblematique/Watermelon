@@ -94,8 +94,8 @@ export default {
   align-items: center;
   flex-direction: row;
   padding: 1rem 0;
-  margin: 1rem auto;
-  background-color: rgba(255, 89, 91 ,0.2);
+  margin: 2rem auto;
+  background-color: rgba(255, 89, 91 ,0.4);
   border-radius: 1rem;
 }
 .title * {
@@ -136,11 +136,13 @@ export default {
   .elements {
     grid-template-columns: repeat(2, auto);
   }
+  /* TODO FIX THIS (or remove)
   .item:last-child,
   .item:nth-last-child(2):nth-child(odd){
     max-width: none;
     grid-column-end: span 2;
   }
+   */
 }
 
 @media (max-width: 670px) {

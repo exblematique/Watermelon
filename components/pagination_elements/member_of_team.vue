@@ -1,5 +1,6 @@
 <template>
-  <div class="member">
+  <div class="member"
+  >
     <div class="member-inner">
       <div
         class="member-front"
@@ -52,7 +53,7 @@ h3{
 .member {
   height: 18rem;
   width: 18rem;
-  perspective: 1000px;
+  perspective: 62rem;
   background-color: transparent;
 }
 /** CSS to flap card **/
@@ -70,7 +71,7 @@ h3{
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 10%;
+  border-radius: 2rem;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }

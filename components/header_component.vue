@@ -88,24 +88,24 @@ export default {
   filter: invert(47%) sepia(20%) saturate(4891%) hue-rotate(326deg) brightness(102%) contrast(99%) drop-shadow(0 0 1px #96b70e);
 }
 /********** STYLE FOR LINKS **********/
-.flexItem *{
+.flexItem a{
   color: white;
-  text-shadow: 0 0 0.5rem #96b70e;
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 1px rgba(255, 89, 91, 0.6));
 }
 .flexItem {
   display: flex;
   align-items: center;
   height: 100%;
   width: auto;
-  margin: 0 20px;
-  font-size: 20px;
-  border-bottom: rgba(150, 183, 14 ,0.5) solid;
+  margin: 0 1rem;
+  border-bottom: rgba(255, 89, 91, 0.4) solid;
 }
 .currentRoute{
-  border-bottom: rgba(255,89,91,0.5) solid;
+  border-bottom: rgba(255, 89, 91, 0.8) solid;
 }
-.currentRoute * {
-  text-shadow: 0 0 0.5rem #ff595b;
+.currentRoute a {
+  filter: drop-shadow(0 0 1px #ff595b);
 }
 .links{
   height: 100%;

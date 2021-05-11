@@ -5,7 +5,7 @@
   >
     <div class="member-inner">
       <div
-        class="member-front"
+        class="member-front bgColor"
         :style="data.style"
       >
         <img
@@ -22,7 +22,7 @@
         </h3>
       </div>
       <div
-        class="member-back"
+        class="member-back bgColor"
       >
         <h2>{{ data.name }}</h2>
         <p>{{ data.description }}</p>
@@ -98,9 +98,6 @@ h3{
   color: white;
 }
 
-.member-back{
-  background-color: rgba(255, 89, 91 ,0.4);
-}
 p {
   margin: auto;
   width: 90%;

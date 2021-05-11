@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="title">
+    <div class="title bgColor">
       <img
         :src="'/title_svg/'+name+'.svg'"
         :alt="title"
@@ -102,7 +102,6 @@ export default {
   flex-direction: row;
   padding: 1rem 0;
   margin: 2rem auto;
-  background-color: rgba(255, 89, 91 ,0.4);
   border-radius: 1rem;
 }
 .title * {
@@ -138,7 +137,7 @@ export default {
   }
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 670px) and (max-width: 1000px) {
   .elements {
     grid-template-columns: 1fr 1fr;
   }
@@ -147,10 +146,9 @@ export default {
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 669px) {
   .elements {
     grid-template-columns: 1fr;
-    justify-content: center;
   }
 }
 </style>

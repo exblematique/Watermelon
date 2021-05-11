@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bgColor">
     <h2>{{ data.title }}</h2>
     <p>{{ data.description }}</p>
   </div>
@@ -21,9 +21,6 @@ div{
   height: 90%;
   padding: 1rem;
   border-radius: 2rem;
-  background-color: rgba(255, 89, 91 ,0.4);
-
-
 }
 p {
   margin: auto;

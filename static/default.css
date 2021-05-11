@@ -27,6 +27,9 @@ h1, h2, header a {
   color: white;
 }
 
+.bgColor{
+  background-color: rgba(255, 89, 91 ,0.4);
+}
 /** General information **/
 h2, h3, p, section {
   width: 100%;

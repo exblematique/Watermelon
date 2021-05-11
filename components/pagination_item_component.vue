@@ -1,6 +1,7 @@
 <template>
   <div
-    v-if="visible"
+    v-show="visible"
+    class="animation"
   >
     <component
       :is="component"
@@ -51,10 +52,28 @@ export default {
         })
         .catch(() => {
           this.component = () => import('@/components/pagination_elements/default')
-        })
-        .finally(() => {
-          setTimeout(() => this.visible = true, this.visibleTime);
         });
+  },
+  created() {
+    setTimeout(() => {
+      this.visible = true;
+    }, this.visibleTime);
   }
 }
 </script>
+
+<style scoped>
+.animation {
+  animation: display 1s;
+  opacity: 1;
+}
+@keyframes display {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+</style>

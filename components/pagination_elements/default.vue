@@ -28,7 +28,5 @@ div{
 p {
   margin: auto;
   width: 90%;
-  text-align: justify;
-  filter: drop-shadow(0 0 1px #ff595b);
 }
 </style>

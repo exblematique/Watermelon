@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="ready"
-    class="member"
+    class="member loadAnim"
   >
     <div class="member-inner">
       <div
@@ -74,6 +74,7 @@ h3{
   position: relative;
   width: 100%;
   height: 100%;
+  animation: rotate 1s;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -98,10 +99,20 @@ h3{
 }
 
 .member-back{
-  background-color: rgba(255, 89, 91 ,0.2);
+  background-color: rgba(255, 89, 91 ,0.4);
 }
 p {
   margin: auto;
   width: 90%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(100deg);
+  }
+
+  to {
+    transform: rotateY(0);
+  }
 }
 </style>

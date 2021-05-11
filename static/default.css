@@ -31,3 +31,7 @@ h1, h2, header a {
 h2, h3, p, section {
   width: 100%;
 }
+p{
+  filter: drop-shadow(0 0 1px #ff595b);
+  text-align: justify;
+}

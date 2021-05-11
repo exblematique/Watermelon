@@ -91,7 +91,6 @@ export default {
 .flexItem a{
   color: white;
   font-size: 1.1rem;
-  filter: drop-shadow(0 0 1px rgba(255, 89, 91, 0.6));
 }
 .flexItem {
   display: flex;

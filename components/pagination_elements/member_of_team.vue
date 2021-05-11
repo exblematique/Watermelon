@@ -1,14 +1,18 @@
 <template>
-  <div class="member">
+  <div
+    v-show="ready"
+    class="member loadAnim"
+  >
     <div class="member-inner">
       <div
-        class="member-front"
+        class="member-front bgColor"
         :style="data.style"
       >
         <img
           :src="data.svg"
           :alt="data.img"
           class="svg"
+          @load="loaded"
         >
         <h3
           v-for="(role, index) in data.roles"
@@ -18,7 +22,7 @@
         </h3>
       </div>
       <div
-        class="member-back"
+        class="member-back bgColor"
       >
         <h2>{{ data.name }}</h2>
         <p>{{ data.description }}</p>
@@ -34,6 +38,16 @@ export default {
     data: {
       type: Object,
       default: null
+    }
+  },
+  data(){
+    return {
+      ready: false
+    }
+  },
+  methods:{
+    loaded(){
+      this.ready = true;
     }
   }
 }
@@ -52,7 +66,7 @@ h3{
 .member {
   height: 18rem;
   width: 18rem;
-  perspective: 1000px;
+  perspective: 62rem;
   background-color: transparent;
 }
 /** CSS to flap card **/
@@ -60,6 +74,7 @@ h3{
   position: relative;
   width: 100%;
   height: 100%;
+  animation: rotate 1s;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -70,7 +85,7 @@ h3{
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 10%;
+  border-radius: 2rem;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -83,11 +98,18 @@ h3{
   color: white;
 }
 
-.member-back{
-  background-color: rgba(255, 89, 91 ,0.2);
-}
 p {
   margin: auto;
   width: 90%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(100deg);
+  }
+
+  to {
+    transform: rotateY(0);
+  }
 }
 </style>

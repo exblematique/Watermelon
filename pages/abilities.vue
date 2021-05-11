@@ -1,6 +1,7 @@
 <template>
   <pagination_component
     :title="'Nos compétences'"
+    :name="'abilities'"
     :list-of-elements="$options.static.items"
     :visible-items-per-page="$options.static.visibleItemsPerPage"
   />

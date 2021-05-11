@@ -61,7 +61,8 @@ body {
 .content{
   min-height: calc(100% - 15rem);
   margin: 3rem auto;
-  width: 95%;
+  width: fit-content;
+  max-width: 95%;
 }
 .header {
   height: 5rem;

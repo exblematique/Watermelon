@@ -61,8 +61,8 @@ export default {
 
 <style scoped>
 .svg{
+  margin: 1rem auto;
   height: 3rem;
-  padding-top: 9rem;
 }
 
 h3{
@@ -96,6 +96,9 @@ h3{
   backface-visibility: hidden;
 }
 .member-front{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
 }

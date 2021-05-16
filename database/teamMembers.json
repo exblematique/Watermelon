@@ -4,13 +4,14 @@
     "lastName": "Bouquet",
     "roles": ["Président de l'association", "Monteur"],
     "description" : "Ceci est un loooooooooooong test de description. Voilà qui je suis : un présdent !",
-    "facebook": "@Xavier",
     "img": "xavier"
   },{
     "firstName": "Caroline",
     "lastName": "Signaire",
     "roles": ["Trésorière", "Monteuse"],
-    "img": "caroline"
+    "img": "caroline",
+    "instagram": "caro_sgnr",
+    "website": "https://caroborij.wixsite.com/carolinesgnr"
   },{
     "firstName": "Océane",
     "lastName": "Canevet",
@@ -20,7 +21,8 @@
     "firstName": "Alexandre",
     "lastName": "Bouché",
     "roles": ["Cadreur"],
-    "img": "alexandre"
+    "img": "alexandre",
+    "website": "https://alexandrebouchepro.wixsite.com/ashreal"
   },{
     "firstName": "Johan",
     "lastName": "Pognant-Gros",
@@ -45,6 +47,7 @@
     "firstName": "Claire",
     "lastName": "Duguey",
     "roles": ["Animatrice 3D"],
-    "img": "claire"
+    "img": "claire",
+    "instagram": "claire.dgy"
   }
 ]

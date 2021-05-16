@@ -24,18 +24,31 @@
           {{ role }}
         </h3>
         <p>{{ data.description }}</p>
-        <fa
-          v-if="data.facebook"
-          :icon="['fab','facebook']"
-        />
-        <h3>{{ data.rs }}</h3>
+        <div class="rs">
+          <iconComponent
+            icon="facebook"
+            :link="data.facebook"
+          />
+          <iconComponent
+            icon="instagram"
+            :link="data.instagram"
+          />
+          <iconComponent
+            icon="website"
+            :link="data.website"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import iconComponent from '@/components/icon_component';
 export default {
+  components: {
+    iconComponent
+  },
   layout: 'memberOfTeam',
   props: {
     data: {

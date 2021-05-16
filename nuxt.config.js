@@ -9,7 +9,11 @@ export default {
       imports: [
         {
           set: '@fortawesome/free-brands-svg-icons',
-          icons: ['faFacebook', 'faTwitter']
+          icons: ['faFacebook', 'faTwitter', 'faInstagram']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faGlobe']
         }
       ]
     }

@@ -1,40 +1,49 @@
 [
   {
-    "name": "Bouquet Xavier",
+    "firstName": "Xavier",
+    "lastName": "Bouquet",
     "roles": ["Président de l'association", "Monteur"],
     "description" : "Ceci est un loooooooooooong test de description. Voilà qui je suis : un présdent !",
-    "rs": "@Xavier",
+    "facebook": "@Xavier",
     "img": "xavier"
   },{
-    "name": "Signaire Caroline",
+    "firstName": "Caroline",
+    "lastName": "Signaire",
     "roles": ["Trésorière", "Monteuse"],
     "img": "caroline"
   },{
-    "name": "Canevet Océane",
+    "firstName": "Océane",
+    "lastName": "Canevet",
     "roles": ["Responsable com","Monteuse"],
     "img": "oceane"
   },{
-    "name": "Bouché Alexandre",
+    "firstName": "Alexandre",
+    "lastName": "Bouché",
     "roles": ["Cadreur"],
     "img": "alexandre"
   },{
-    "name": "Pognant-Gros Johan",
+    "firstName": "Johan",
+    "lastName": "Pognant-Gros",
     "roles": ["Cadreur"],
     "img": "johan"
   },{
-    "name": "Jouslin Aurélie",
+    "firstName": "Aurélie",
+    "lastName": "Jouslin",
     "roles": ["Cadreuse"],
     "img": "aurelie"
   },{
-    "name": "Gazeau Aigline",
+    "firstName": "Aigline",
+    "lastName": "Gazeau",
     "roles": ["Ingenieure du son"],
     "img": "aigline"
   },{
-    "name": "Berling Morgane",
+    "firstName": "Morgane",
+    "lastName":"Berling",
     "roles": ["Actrice"],
     "img": "morgane"
   },{
-    "name": "Duguey Claire",
+    "firstName": "Claire",
+    "lastName": "Duguey",
     "roles": ["Animatrice 3D"],
     "img": "claire"
   }

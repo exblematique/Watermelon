@@ -13,20 +13,21 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "npm": "^7.11.2",
-    "npm-check": "^5.9.2",
-    "nuxt": "^2.15.4",
-    "nuxt-ssr-screen-size": "^1.0.0"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "nuxt": "^2.15.6",
+    "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-parser": "^7.14.2",
     "@babel/plugin-proposal-private-methods": "^7.13.0",
     "@babel/preset-env": "^7.14.0",
-    "@nuxt/types": "^2.15.4",
     "@nuxtjs/eslint-module": "^3.0.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^7.25.0",
+    "eslint": "^7.26.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-vue": "^7.9.0",
     "eslint-webpack-plugin": "^2.5.4"

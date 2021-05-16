@@ -2,6 +2,19 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module'
   ],
+
+  modules:[
+    [ 'nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faFacebook', 'faTwitter']
+        }
+      ]
+    }
+    ]
+  ],
   // Disable loading
   loading: false,
 

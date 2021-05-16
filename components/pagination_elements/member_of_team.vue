@@ -1,7 +1,6 @@
 <template>
   <div
-    v-show="ready"
-    class="member loadAnim"
+    class="member"
   >
     <div class="member-inner">
       <div
@@ -12,25 +11,29 @@
           :src="data.svg"
           :alt="data.img"
           class="svg"
-          @load="loaded"
         >
+      </div>
+      <div
+        class="member-back bgColor"
+      >
+        <h2>{{ data.firstName }} {{ data.lastName }}</h2>
         <h3
           v-for="(role, index) in data.roles"
           :key="index"
         >
           {{ role }}
         </h3>
-      </div>
-      <div
-        class="member-back bgColor"
-      >
-        <h2>{{ data.name }}</h2>
         <p>{{ data.description }}</p>
+        <fa
+          v-if="data.facebook"
+          :icon="['fab','facebook']"
+        />
         <h3>{{ data.rs }}</h3>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   layout: 'memberOfTeam',
@@ -38,16 +41,6 @@ export default {
     data: {
       type: Object,
       default: null
-    }
-  },
-  data(){
-    return {
-      ready: false
-    }
-  },
-  methods:{
-    loaded(){
-      this.ready = true;
     }
   }
 }

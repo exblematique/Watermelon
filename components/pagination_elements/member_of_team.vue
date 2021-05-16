@@ -107,6 +107,11 @@ h3{
   color: white;
 }
 
+.member-back {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 p {
   margin: auto;
   width: 90%;

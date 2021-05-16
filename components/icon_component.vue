@@ -5,6 +5,7 @@
   >
     <fa
       :icon="dbIcon[icon].icon"
+      class="icon"
     />
   </a>
 </template>
@@ -45,5 +46,9 @@ export default {
 </script>
 
 <style scoped>
-
+.icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+}
 </style>

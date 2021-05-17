@@ -91,6 +91,7 @@ export default {
 .flexItem a{
   color: white;
   font-size: 1.1rem;
+  text-shadow: 0 0 0.5rem #ff595b;
 }
 .flexItem {
   display: flex;
@@ -104,7 +105,7 @@ export default {
   border-bottom: rgba(255, 89, 91, 0.8) solid;
 }
 .currentRoute a {
-  filter: drop-shadow(0 0 1px #ff595b);
+  filter: drop-shadow(0 0 1px rgba(255, 89, 91, 0.7));
 }
 .links{
   height: 100%;

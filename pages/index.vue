@@ -12,7 +12,7 @@
       <img
         src="/assets/txt-watermelon.svg"
         alt="Watermelon"
-        class="logo-txt"
+        class="logo-txt dropShadow"
       >
     </div>
     <h1>Association de réalisation et production audiovisuelle</h1>
@@ -55,10 +55,5 @@ export default {
 .logo-txt {
   position: relative;
   height: 7rem;
-  filter: drop-shadow(2px 2px 4px #96b70e);
-}
-
-h1 {
-  font-size: 2rem;
 }
 </style>

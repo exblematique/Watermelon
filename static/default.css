@@ -16,7 +16,6 @@ html, body, .app, #__nuxt, #__layout {
 /** Text format **/
 h1, h2, header a {
     font-family: 'Eagle Book', 'Arial', sans-serif;
-    text-shadow: 0 0 0.5rem #ff595b;
     color: white;
     font-weight: normal;
 }
@@ -34,7 +33,9 @@ h1, h2, header a {
 h2, h3, p, section {
   width: 100%;
 }
-p{
+h1, h2, h3, p, .dropShadow {
   filter: drop-shadow(0 0 1px #ff595b);
+}
+p{
   text-align: justify;
 }

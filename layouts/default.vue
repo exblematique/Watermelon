@@ -35,8 +35,8 @@ body {
       linear-gradient(
           180deg,
           rgba(255, 228, 235, 0.95) 4rem,
-          rgba(212, 216, 255, 0.85) 75%,
-          rgba(186, 200, 149, 0.9) 100%
+          rgba(212, 216, 255, 0.85) 60%,
+          rgba(200, 210, 190, 0.9) 100%
       ), url('/background/watermelon.webp');
   background-color: #96b70e;
   background-repeat: no-repeat;

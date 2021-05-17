@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="dropShadow">
     <span>© Watermelon | 2020 - {{ year }}</span>
   </footer>
 </template>

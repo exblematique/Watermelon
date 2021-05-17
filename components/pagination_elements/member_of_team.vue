@@ -10,7 +10,7 @@
         <img
           :src="data.svg"
           :alt="data.img"
-          class="svg"
+          class="svg dropShadow"
         >
       </div>
       <div
@@ -24,7 +24,7 @@
           {{ role }}
         </h3>
         <p>{{ data.description }}</p>
-        <div class="rs">
+        <div class="rs dropShadow">
           <iconComponent
             icon="facebook"
             :link="data.facebook"

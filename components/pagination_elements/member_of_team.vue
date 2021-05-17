@@ -66,8 +66,13 @@ export default {
 }
 
 h3{
-  padding-top: 1rem;
+  padding-bottom: 0.1rem;
   margin: 0;
+}
+p {
+  margin: 1rem auto 0;
+  height: 100%;
+  width: 90%;
 }
 .member {
   height: 18rem;
@@ -111,10 +116,6 @@ h3{
   display: flex;
   flex-direction: column;
   align-items: stretch;
-}
-p {
-  margin: auto;
-  width: 90%;
 }
 
 @keyframes rotate {

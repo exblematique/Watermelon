@@ -30,15 +30,17 @@ export default {
   border-radius: 2rem;
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: color;
 }
 .text{
+  display: flex;
+  flex-direction: column;
   min-height: 12rem;
-  height: fit-content;
+  height: 50%;
   border-radius: 0 0 2rem 2rem;
 }
 p {
-  margin: auto;
+  margin: auto auto 1rem;
   width: 90%;
+  text-shadow: black 0 0 1rem;
 }
 </style>

@@ -12,6 +12,7 @@ html, body, .app, #__nuxt, #__layout {
     local('Eagle-Book'),
     url('/font/eagle-book.ttf')
     format('truetype');
+  font-display: swap;
 }
 /** Text format **/
 h1, h2, header a {

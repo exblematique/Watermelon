@@ -1,6 +1,6 @@
 <template>
   <div
-    class="element"
+    class="element bgColor"
     :style="{'background-image': 'url(/background/abilities/'+data.img}"
   >
     <div class="text">

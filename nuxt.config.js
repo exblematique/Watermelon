@@ -33,6 +33,9 @@ export default {
 
   // Headers of the page
   head: {
+    htmlAttrs: {
+      lang: 'fr'
+    },
     title: 'Watermelon',
     meta: [
       {charset: 'utf-8'},

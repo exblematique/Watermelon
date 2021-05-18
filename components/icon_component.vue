@@ -1,6 +1,7 @@
 <template>
   <a
     v-if="link"
+    :title="icon.charAt(0).toUpperCase() + icon.substring(1)"
     :href="dbIcon[icon].url + link"
   >
     <fa

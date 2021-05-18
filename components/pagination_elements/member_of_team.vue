@@ -10,7 +10,7 @@
         <img
           :src="data.svg"
           :alt="data.img"
-          class="svg dropShadow"
+          class="svg redSvg"
         >
       </div>
       <div
@@ -24,7 +24,7 @@
           {{ role }}
         </h3>
         <p>{{ data.description }}</p>
-        <div class="rs dropShadow">
+        <div class="rs redSvg">
           <iconComponent
             icon="facebook"
             :link="data.facebook"
@@ -108,14 +108,14 @@ p {
   background-size: cover;
 }
 
-.member-front * {
-  color: white;
-}
-
 .member-back {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+.member-back *{
+  color: #ff595b;
 }
 
 @keyframes rotate {

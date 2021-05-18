@@ -8,7 +8,7 @@
           alt="Logo de l'association Watermelon"
         >
         <img
-          class="logo-header logo-txt"
+          class="logo-header logo-txt redSvg"
           src="/assets/txt-watermelon.svg"
           alt="Watermelon"
         >
@@ -71,7 +71,7 @@ export default {
   height: 100%;
   width: 93%;
   margin: auto;
-  border-bottom: rgba(254, 249, 227, 1) solid;
+  border-bottom: rgba(255, 207, 221, 0.9) solid;
 }
 /********** STYLE FOR LOGO **********/
 .logo-header{
@@ -84,32 +84,26 @@ export default {
 .logo-txt{
   padding-left: 0.5rem;
   height: 2rem;
-  -webkit-filter: invert(47%) sepia(20%) saturate(4891%) hue-rotate(326deg) brightness(102%) contrast(99%) drop-shadow(0 0 1px #96b70e);
-  filter: invert(47%) sepia(20%) saturate(4891%) hue-rotate(326deg) brightness(102%) contrast(99%) drop-shadow(0 0 1px #96b70e);
 }
 /********** STYLE FOR LINKS **********/
 .flexItem a{
-  color: white;
+  color: #ff595b;
   font-size: 1.1rem;
-  text-shadow: 0 0 0.5rem #ff595b;
 }
 .flexItem {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: auto;
-  margin: 0 1rem;
-  border-bottom: rgba(255, 89, 91, 0.4) solid;
+display: flex;
+align-items: center;
+height: 100%;
+width: auto;
+margin: 0 1rem;
+border-bottom: rgba(255, 89, 91, 0.4) solid;
 }
 .currentRoute{
-  border-bottom: rgba(255, 89, 91, 0.8) solid;
-}
-.currentRoute a {
-  filter: drop-shadow(0 0 1px rgba(255, 89, 91, 0.7));
+border-bottom: rgba(255, 89, 91, 0.8) solid;
 }
 .links{
-  height: 100%;
-  width: auto;
+height: 100%;
+width: auto;
 }
 /* Particular CSS when the link forward to the current page */
 .nuxt-link-exact-active{

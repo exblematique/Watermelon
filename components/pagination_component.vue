@@ -1,9 +1,10 @@
 <template>
   <section>
-    <div class="title bgColor">
+    <div class="title">
       <img
         :src="'/title_svg/'+name+'.svg'"
         :alt="title"
+        class="redSvg"
       />
     </div>
     <transition-group
@@ -91,7 +92,6 @@ export default {
 .title > img {
   height: 100%;
   width: auto;
-  filter: drop-shadow(0 0 2px #ff595b);
 }
 
 .title {

@@ -12,7 +12,7 @@
       <img
         src="/assets/txt-watermelon.svg"
         alt="Watermelon"
-        class="logo-txt dropShadow"
+        class="logo-txt"
       >
     </div>
     <h1>Association de réalisation et production audiovisuelle</h1>
@@ -31,7 +31,7 @@ export default {
 <style scoped>
 .logo-home {
   position: relative;
-  height: 15rem;
+  height: 19rem;
 
   display: flex;
   justify-content: center;
@@ -55,5 +55,8 @@ export default {
 .logo-txt {
   position: relative;
   height: 7rem;
+}
+h1{
+  font-size: 2rem;
 }
 </style>

@@ -29,13 +29,18 @@ h1, h2, header a {
 .bgColor{
   background-color: rgba(255, 89, 91 ,0.4);
 }
+
+.redSvg{
+  filter: invert(47%) sepia(20%) saturate(4891%) hue-rotate(326deg) brightness(102%) contrast(99%)
+}
 /** General information **/
 h2, h3, p, section {
   width: 100%;
 }
-h1, h2, h3, p, .dropShadow {
+.dropShadow {
   filter: drop-shadow(0 0 1px #ff595b);
 }
+
 p{
   text-align: justify;
 }

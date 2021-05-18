@@ -1,9 +1,9 @@
 <template>
   <div
     class="element"
-    :style="{'background-image': 'linear-gradient(#ffcfdd, #ffcfdd), url(/background/abilities/'+data.img}"
+    :style="{'background-image': 'url(/background/abilities/'+data.img}"
   >
-    <div class="bgColor text">
+    <div class="text">
       <h2>{{ data.title }}</h2>
       <p>{{ data.description }}</p>
     </div>
@@ -33,7 +33,7 @@ export default {
   background-blend-mode: color;
 }
 .text{
-  min-height: 15rem;
+  min-height: 12rem;
   height: fit-content;
   border-radius: 0 0 2rem 2rem;
 }

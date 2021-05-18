@@ -10,7 +10,7 @@
         <img
           :src="data.svg"
           :alt="data.img"
-          class="svg redSvg"
+          class="svg"
         >
       </div>
       <div

@@ -1,7 +1,6 @@
 <template>
   <div
-    v-show="ready"
-    class="member loadAnim"
+    class="member"
   >
     <div class="member-inner">
       <div
@@ -11,43 +10,50 @@
         <img
           :src="data.svg"
           :alt="data.img"
-          class="svg"
-          @load="loaded"
+          class="svg dropShadow"
         >
+      </div>
+      <div
+        class="member-back bgColor"
+      >
+        <h2>{{ data.firstName }} {{ data.lastName }}</h2>
         <h3
           v-for="(role, index) in data.roles"
           :key="index"
         >
           {{ role }}
         </h3>
-      </div>
-      <div
-        class="member-back bgColor"
-      >
-        <h2>{{ data.name }}</h2>
         <p>{{ data.description }}</p>
-        <h3>{{ data.rs }}</h3>
+        <div class="rs dropShadow">
+          <iconComponent
+            icon="facebook"
+            :link="data.facebook"
+          />
+          <iconComponent
+            icon="instagram"
+            :link="data.instagram"
+          />
+          <iconComponent
+            icon="website"
+            :link="data.website"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
+import iconComponent from '@/components/icon_component';
 export default {
+  components: {
+    iconComponent
+  },
   layout: 'memberOfTeam',
   props: {
     data: {
       type: Object,
       default: null
-    }
-  },
-  data(){
-    return {
-      ready: false
-    }
-  },
-  methods:{
-    loaded(){
-      this.ready = true;
     }
   }
 }
@@ -55,13 +61,18 @@ export default {
 
 <style scoped>
 .svg{
+  margin: 1rem auto;
   height: 3rem;
-  padding-top: 9rem;
 }
 
 h3{
-  padding-top: 1rem;
+  padding-bottom: 0.1rem;
   margin: 0;
+}
+p {
+  margin: 1rem auto 0;
+  height: 100%;
+  width: 90%;
 }
 .member {
   height: 18rem;
@@ -90,6 +101,9 @@ h3{
   backface-visibility: hidden;
 }
 .member-front{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -98,9 +112,10 @@ h3{
   color: white;
 }
 
-p {
-  margin: auto;
-  width: 90%;
+.member-back {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 @keyframes rotate {

@@ -58,7 +58,7 @@ export default {
     },
     timeBetweenEachAnimation: {
       type: Number,
-      default: 500
+      default: 250
     }
   },
 

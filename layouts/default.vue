@@ -31,7 +31,12 @@ export default {
 </script>
 <style>
 body {
-  background-image: url('/background/watermelon.webp');
+  background-image:
+      linear-gradient(
+          180deg,
+          #FFFE 4rem,
+          #FFFA 100%
+      ), url('/background/watermelon.webp');
   background-color: #fef9e3;
   background-repeat: no-repeat;
   background-size: cover;

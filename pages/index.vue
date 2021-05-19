@@ -44,8 +44,8 @@ export default {
   width: 100%;
 
   /* Add the blur effect */
-  filter: blur(0.25rem);
-  -webkit-filter: blur(0.25rem);
+  filter: blur(0.2rem);
+  -webkit-filter: blur(0.2rem);
 }
 
 .logo-img > img{
@@ -55,6 +55,7 @@ export default {
 .logo-txt {
   position: relative;
   height: 7rem;
+  filter: drop-shadow(1px 1px 1px black);
 }
 h1{
   font-size: 2rem;

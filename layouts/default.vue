@@ -31,25 +31,14 @@ export default {
 </script>
 <style>
 body {
-  background-image:
-      linear-gradient(
-          180deg,
-          rgba(255,255,255, 0.95) 4rem,
-          rgba(255,255,255, 0.75) 100%
-      ), url('/background/watermelon.webp');
+  background-image: url('/background/watermelon.webp');
   background-color: #fef9e3;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 .index{
-  background-image:
-      linear-gradient(
-          180deg,
-          rgba(255, 228, 235, 1),
-          rgba(255, 228, 235, 0.5) 75%,
-          rgba(255,255,255,0.2)
-      ), url('/background/fond1.webp');
+  background-image: url('/background/fond1.webp');
 }
 </style>
 <style scoped>

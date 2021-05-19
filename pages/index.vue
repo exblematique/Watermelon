@@ -54,7 +54,11 @@ export default {
   height: 7rem;
   filter: drop-shadow(1px 1px 0.2rem black);
 }
+.index h1{
+  color: #FFF;
+}
 h1{
+  color: #ff595b;
   font-size: 2rem;
 }
 </style>

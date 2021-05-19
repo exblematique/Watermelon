@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style scoped>
+header{
+  background-color: #4F79EC;
+}
 .flex{
    display: flex;
  }
@@ -87,7 +90,6 @@ export default {
 }
 /********** STYLE FOR LINKS **********/
 .flexItem a{
-  color: #ff595b;
   font-size: 1.1rem;
 }
 .flexItem {

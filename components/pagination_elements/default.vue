@@ -1,7 +1,7 @@
 <template>
   <div
     class="element bgColor"
-    :style="{'background-image': 'url(/background/abilities/'+data.img}"
+    :style="{'background-image': 'linear-gradient(#0000 40%, #000), url(\'/background/abilities/'+data.img+'\')'}"
   >
     <div class="text">
       <h2>{{ data.title }}</h2>

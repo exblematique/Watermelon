@@ -60,12 +60,22 @@ export default {
 </script>
 
 <style scoped>
+/* Add exception for index page */
+.index header, .index header::before{
+  background-color: transparent;
+  box-shadow: none;
+}
 header{
-  background-color: #4F79EC;
+  background: #ffcfdd;
 }
 .flex{
    display: flex;
+
  }
+.flex * {
+  z-index: 2;
+}
+
 /********** DISPLAY LINE IN HEADER **********/
 .underline > *{
   margin: 0 auto;
@@ -74,7 +84,21 @@ header{
   height: 100%;
   width: 93%;
   margin: auto;
-  border-bottom: rgba(255, 207, 221, 0.9) solid;
+}
+/****** Add invert border radius in header ********/
+header::before{
+  content: "";
+  position: absolute;
+  /* Top is the header size */
+  top: 5rem;
+  left: 0;
+  background-color: transparent;
+  height: 4rem;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -2rem 0 0 #ffcfdd;
+  z-index: 1;
+
 }
 /********** STYLE FOR LOGO **********/
 .logo-header{
@@ -83,6 +107,7 @@ header{
   height: 3rem;
   width: auto;
   margin: auto;
+
 }
 .logo-txt{
   padding-left: 0.5rem;
@@ -93,19 +118,15 @@ header{
   font-size: 1.1rem;
 }
 .flexItem {
-display: flex;
-align-items: center;
-height: 100%;
-width: auto;
-margin: 0 1rem;
-border-bottom: rgba(255, 89, 91, 0.4) solid;
-}
-.currentRoute{
-border-bottom: rgba(255, 89, 91, 0.8) solid;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  margin: 0 1rem;
 }
 .links{
-height: 100%;
-width: auto;
+  height: 100%;
+  width: auto;
 }
 /* Particular CSS when the link forward to the current page */
 .nuxt-link-exact-active{

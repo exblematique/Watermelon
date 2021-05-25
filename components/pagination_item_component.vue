@@ -30,29 +30,16 @@ export default {
   },
   data () {
     return {
-      component: null,
-      visible: false
-    }
-  },
-  computed: {
-    loader() {
-      if (!this.type) {
-        return null
-      }
-      return () => import(`@/components/pagination_elements/${this.type}`)
+      component: () => import(`@/components/pagination_elements/${this.type}`),
+      //Start in visible when script are disabled
+      visible: true
     }
   },
   // When page is mounted
   // Load the corresponding component
   // Then create timer to display each element
   mounted() {
-    this.loader()
-        .then(() => {
-          this.component = () => this.loader()
-        })
-        .catch(() => {
-          this.component = () => import('@/components/pagination_elements/default')
-        });
+    this.visible = false;
   },
   created() {
     setTimeout(() => {

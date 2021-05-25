@@ -60,6 +60,11 @@ export default {
 </script>
 
 <style scoped>
+/* Add exception for index page */
+.index header, .index header::before{
+  background-color: transparent;
+  box-shadow: none;
+}
 header{
   background: #ffcfdd;
 }

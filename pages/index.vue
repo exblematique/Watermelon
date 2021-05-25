@@ -42,7 +42,7 @@ export default {
   position: absolute;
   height: 100%;
   width: 100%;
-  filter: drop-shadow(0 0 1px black);
+  filter: drop-shadow(0 0 1px #0005);
 }
 
 .logo-img > img{
@@ -52,7 +52,7 @@ export default {
 .logo-txt {
   position: relative;
   height: 7rem;
-  filter: drop-shadow(1px 1px 0.2rem black);
+  filter: drop-shadow(1px 1px 0.2rem #0007);
 }
 .index h1{
   color: #FFF;

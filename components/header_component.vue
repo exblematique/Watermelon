@@ -74,6 +74,10 @@ export default {
   clip-path: ellipse(49% 50%);
   height: 2px;
 }
+.index .flexItem a {
+  color: white;
+}
+
 header{
   background: #ffe4eb;
 }

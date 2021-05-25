@@ -65,8 +65,21 @@ export default {
   background-color: transparent;
   box-shadow: none;
 }
+.index .logo-txt{
+  filter: none;
+}
+.index header::before{
+  position: absolute;
+  background-color: white;
+  clip-path: ellipse(49% 50%);
+  height: 2px;
+}
+.index .flexItem a {
+  color: white;
+}
+
 header{
-  background: #ffcfdd;
+  background: #ffe4eb;
 }
 .flex{
    display: flex;
@@ -90,15 +103,14 @@ header::before{
   content: "";
   position: absolute;
   /* Top is the header size */
-  top: 5rem;
+  top: calc(5rem - 2px);
   left: 0;
   background-color: transparent;
   height: 4rem;
   width: 100%;
   border-radius: 2rem 2rem 0 0;
-  box-shadow: 0 -2rem 0 0 #ffcfdd;
+  box-shadow: 0 -2rem 0 0 #ffe4eb;
   z-index: 1;
-
 }
 /********** STYLE FOR LOGO **********/
 .logo-header{
@@ -116,13 +128,30 @@ header::before{
 /********** STYLE FOR LINKS **********/
 .flexItem a{
   font-size: 1.1rem;
+  color: #ff595b;
 }
 .flexItem {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: auto;
   margin: 0 1rem;
+}
+/* Add the same empty item than ::after */
+.flexItem::before{
+  content: "";
+  height: 2px;
+}
+.flexItem::after {
+  margin: 0 auto;
+  content: "";
+  height: 2px;
+  width: 2rem;
+  background-color: #ff595b66;
+}
+.currentRoute.flexItem::after{
+  background-color: #ff595b;
 }
 .links{
   height: 100%;

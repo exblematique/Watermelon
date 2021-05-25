@@ -103,7 +103,7 @@ header::before{
   content: "";
   position: absolute;
   /* Top is the header size */
-  top: 5rem;
+  top: calc(5rem - 2px);
   left: 0;
   background-color: transparent;
   height: 4rem;
@@ -132,10 +132,26 @@ header::before{
 }
 .flexItem {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: auto;
   margin: 0 1rem;
+}
+/* Add the same empty item than ::after */
+.flexItem::before{
+  content: "";
+  height: 2px;
+}
+.flexItem::after {
+  margin: 0 auto;
+  content: "";
+  height: 2px;
+  width: 2rem;
+  background-color: #ff595b66;
+}
+.currentRoute.flexItem::after{
+  background-color: #ff595b;
 }
 .links{
   height: 100%;

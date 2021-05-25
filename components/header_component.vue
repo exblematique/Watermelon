@@ -75,7 +75,7 @@ export default {
   height: 2px;
 }
 header{
-  background: #ffcfdd;
+  background: #ffe4eb;
 }
 .flex{
    display: flex;
@@ -105,9 +105,8 @@ header::before{
   height: 4rem;
   width: 100%;
   border-radius: 2rem 2rem 0 0;
-  box-shadow: 0 -2rem 0 0 #ffcfdd;
+  box-shadow: 0 -2rem 0 0 #ffe4eb;
   z-index: 1;
-
 }
 /********** STYLE FOR LOGO **********/
 .logo-header{
@@ -125,6 +124,7 @@ header::before{
 /********** STYLE FOR LINKS **********/
 .flexItem a{
   font-size: 1.1rem;
+  color: #ff595b;
 }
 .flexItem {
   display: flex;

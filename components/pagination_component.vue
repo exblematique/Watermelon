@@ -5,7 +5,7 @@
         :src="'/title_svg/'+name+'.svg'"
         :alt="title"
         class="redSvg"
-      />
+      >
     </div>
     <transition-group
       name="opacity"

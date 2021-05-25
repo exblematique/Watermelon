@@ -100,7 +100,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   margin: 2rem auto;
   border-radius: 1rem;
 }

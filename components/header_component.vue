@@ -65,6 +65,15 @@ export default {
   background-color: transparent;
   box-shadow: none;
 }
+.index .logo-txt{
+  filter: none;
+}
+.index header::before{
+  position: absolute;
+  background-color: white;
+  clip-path: ellipse(49% 50%);
+  height: 2px;
+}
 header{
   background: #ffcfdd;
 }
